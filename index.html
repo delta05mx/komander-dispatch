@@ -1,16 +1,524 @@
-
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
+<html lang="es"><head>
+    <meta charset="UTF-8"><style id="qw-theme">:root {
+  --contextual-navbar-foreground-color: #000000 !important;
+  --connection-foreground-color: #FFFFFF !important;
+  --automation-foreground-color: #FFFFFF !important;
+  --global-navbar-background-color: #F3F3F7 !important;
+  --accent-foreground-color: #FFFFFF !important;
+  --primary-foreground-color: #000000 !important;
+  --measure-foreground-color: #CB7600 !important;
+  --dimension-foreground-color: #1B84BF !important;
+  --warning-background-color: #FF9800 !important;
+  --warning-foreground-color: #000000 !important;
+  --success-background-color: #27700E !important;
+  --info-foreground-color: #FFFFFF !important;
+  --secondary-foreground-color: #000000 !important;
+  --info-background-color: #2196F3 !important;
+  --measure-background-color: #FFF8EF !important;
+  --contextual-navbar-background-color: #FFFFFF !important;
+  --accent-background-color: #4200DB !important;
+  --visualization-background-color: #6842FF !important;
+  --connection-background-color: #FF4B14 !important;
+  --secondary-background-color: #F8F8FA !important;
+  --danger-background-color: #C82745 !important;
+  --automation-background-color: #D600BA !important;
+  --success-foreground-color: #FFFFFF !important;
+  --danger-foreground-color: #FFFFFF !important;
+  --dimension-background-color: #EEF8FF !important;
+  --insight-foreground-color: #FFFFFF !important;
+  --primary-background-color: #FFFFFF !important;
+  --insight-background-color: #78008A !important;
+  --visualization-foreground-color: #FFFFFF !important;
+  --global-navbar-foreground-color: #5A5A5B !important;
+  --chat-column-max: 720px !important;
+  --color-bg: #faf9fc !important;
+  --color-navbar-bg: #f9f9fb !important;
+  --color-navbar-fg: #131920 !important;
+  --color-navbar-divider: rgba(0, 0, 0, .12) !important;
+  --color-leftnav-bg: #ffffff !important;
+  --color-bg-chat-view: #f9f9fb !important;
+  --color-bg-secondary: #ffffff !important;
+  --color-bg-tertiary: #f9fafb !important;
+  --color-bg-hover: #f3f4f6 !important;
+  --color-surface: #f9fafb !important;
+  --color-surface-hover: #f3f4f6 !important;
+  --color-surface-active: #e5e7eb !important;
+  --color-border: rgba(0, 0, 0, .12) !important;
+  --color-border-light: rgba(0, 0, 0, .06) !important;
+  --color-border-strong: #d1d5db !important;
+  --background-toggle-off-default: rgba(255, 255, 255, 0) !important;
+  --color-primary: #4200db !important;
+  --color-primary-dark: #35009e !important;
+  --color-primary-light: #8575ff !important;
+  --color-primary-bg: #e8e6ff !important;
+  --color-primary-hover-border: #35009e !important;
+  --color-nav-icon-active: #4200db !important;
+  --color-nav-hover-border: #4200db !important;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent) !important;
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent) !important;
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent) !important;
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent) !important;
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent) !important;
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent) !important;
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent) !important;
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent) !important;
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent) !important;
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-focus-ring: #4200db !important;
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-sidebar-hover-solid: color-mix(in srgb, #4200db 12%, #faf9fc) !important;
+  --block-selection-outline-offset: 2px !important;
+  --color-accent: #4200db !important;
+  --color-accent-foreground: #4200db !important;
+  --color-accent-dark: #35009e !important;
+  --color-accent-light: #e8e6ff !important;
+  --color-accent-inverse: #ffffff !important;
+  --color-link: #4200db !important;
+  --color-brand-ai-gradient-start: #6842ff !important;
+  --color-brand-ai-gradient-mid: #d600ba !important;
+  --color-brand-ai-gradient-end: #ff4b14 !important;
+  --color-brand-kiro: #9147ff !important;
+  --color-primary-gradient-end: #e8e6ff !important;
+  --color-primary-bg-solid: #e8e6ff !important;
+  --color-user-bubble: #F3F3F7 !important;
+  --color-user-bubble-text: #131920 !important;
+  --color-text: #131920 !important;
+  --color-text-secondary: #5e5e5e !important;
+  --color-text-tertiary: #656871 !important;
+  --color-text-muted: #656871 !important;
+  --color-text-on-primary: #ffffff !important;
+  --color-success: #00802f !important;
+  --color-success-dark: #00471e !important;
+  --color-success-light: #d9ffd6 !important;
+  --color-success-hover: #005c26 !important;
+  --color-success-bg: #e6f5eb !important;
+  --color-success-border: #b3d9bf !important;
+  --color-success-foreground: #00802f !important;
+  --color-success-dark-foreground: #00471e !important;
+  --color-success-text: #00471e !important;
+  --color-error: #db0000 !important;
+  --color-error-dark: #700000 !important;
+  --color-error-light: #ffe0e0 !important;
+  --color-error-hover: #ffe0e0 !important;
+  --color-error-bg: #fceaea !important;
+  --color-error-border: #f2cccc !important;
+  --color-error-active-border: #db0000 !important;
+  --color-error-foreground: #db0000 !important;
+  --color-error-dark-foreground: #700000 !important;
+  --color-error-inverse: #ffffff !important;
+  --color-error-text: #700000 !important;
+  --color-warning: #f2b100 !important;
+  --color-warning-dark: #573a00 !important;
+  --color-warning-light: #fffbbd !important;
+  --color-warning-hover: #db9200 !important;
+  --color-warning-bg: #fef7e6 !important;
+  --color-warning-border: #f9dfa3 !important;
+  --color-warning-foreground: #f2b100 !important;
+  --color-warning-dark-foreground: #573a00 !important;
+  --color-warning-inverse: #573a00 !important;
+  --color-surface-warning: #fffbbd !important;
+  --color-text-warning: #573a00 !important;
+  --color-info: #006ce0 !important;
+  --color-info-dark: #002a66 !important;
+  --color-info-light: #d1f1ff !important;
+  --color-info-hover: #003b8f !important;
+  --color-info-bg: #ebf3fc !important;
+  --color-info-border: #b3d1f0 !important;
+  --color-info-foreground: #006ce0 !important;
+  --color-info-dark-foreground: #002a66 !important;
+  --color-info-inverse: #ffffff !important;
+  --color-overlay: rgba(0, 0, 0, .5) !important;
+  --color-shadow: rgba(0, 0, 0, .08) !important;
+  --color-hover: rgba(0, 0, 0, .05) !important;
+  --color-tooltip-bg: rgba(0, 0, 0, .85) !important;
+  --color-tooltip-text: #ffffff !important;
+  --color-voice-purple: #8575ff !important;
+  --color-voice-purple-dark: #4200db !important;
+  --color-voice-purple-light: #8575ff !important;
+  --color-voice-red: #db0000 !important;
+  --color-voice-red-dark: #700000 !important;
+  --color-voice-amber: #f2b100 !important;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4) !important;
+  --color-voice-red-glow: rgba(219, 0, 0, .4) !important;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace !important;
+  --text-2xs: .5625rem !important;
+  --text-xs: .625rem !important;
+  --text-sm: .6875rem !important;
+  --text-base: .75rem !important;
+  --text-md: .8125rem !important;
+  --text-lg: .875rem !important;
+  --text-xl: 1rem !important;
+  --text-2xl: 1.125rem !important;
+  --text-3xl: 1.25rem !important;
+  --text-4xl: 1.5rem !important;
+  --text-5xl: 2rem !important;
+  --spacing-1: calc(.25rem * 1) !important;
+  --spacing-1-5: calc(.25rem * 1.5) !important;
+  --spacing-2: calc(.25rem * 2) !important;
+  --spacing-3: calc(.25rem * 3) !important;
+  --spacing-4: calc(.25rem * 4) !important;
+  --spacing-5: calc(.25rem * 5) !important;
+  --spacing-6: calc(.25rem * 6) !important;
+  --spacing-7: calc(.25rem * 7) !important;
+  --spacing-8: calc(.25rem * 8) !important;
+  --spacing-9: calc(.25rem * 9) !important;
+  --spacing-10: calc(.25rem * 10) !important;
+  --border-radius-rounded-lg: 8px !important;
+  --radius-sm: 6px !important;
+  --radius-md: 10px !important;
+  --radius-card: 12px !important;
+  --radius-lg: 16px !important;
+  --radius-pill: 8px !important;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05) !important;
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .08) !important;
+  --shadow-lg: 0 4px 16px 4px rgba(0, 0, 0, .16), 0 2px 6px 1px rgba(0, 0, 0, .16) !important;
+  --color-success-bg-solid: #d9ffd6 !important;
+  --color-error-bg-solid: #ffe0e0 !important;
+  --color-error-border-solid: #ffe0e0 !important;
+  --color-warning-bg-solid: #fffbbd !important;
+  --color-warning-text: #573a00 !important;
+  --color-info-bg-solid: #d1f1ff !important;
+  --color-info-bg-solid-alt: #d1f1ff !important;
+  --color-info-text: #002a66 !important;
+  --color-info-text-alt: #002a66 !important;
+  --color-emerald: #10b981 !important;
+  --color-teal: #4ecdc4 !important;
+  --color-code-bg: #F3F3F7 !important;
+  --color-code-header-bg: #f1f3f5 !important;
+  --color-code-text: #24292e !important;
+  --color-code-border: #e1e4e8 !important;
+  --color-code-muted: #6a737d !important;
+  --color-inline-code-bg: #F3F3F7 !important;
+  --color-inline-code-text: #24292e !important;
+  --color-inline-code-border: #e1e4e8 !important;
+  --color-scrollbar-thumb: #d1d5db !important;
+  --color-scrollbar-track: transparent !important;
+  --qs-data-cat-01: #4338CA !important;
+  --qs-data-cat-02: #D97706 !important;
+  --qs-data-cat-03: #0891B2 !important;
+  --qs-data-cat-04: #8B5CF6 !important;
+  --qs-data-cat-05: #15803D !important;
+  --qs-data-cat-06: #0C4A6E !important;
+  --qs-data-cat-07: #D946EF !important;
+  --qs-data-cat-08: #65A30D !important;
+  --qs-data-cat-09: #1D4ED8 !important;
+  --qs-data-cat-10: #831843 !important;
+  --qs-data-cat-11: #C2410C !important;
+  --qs-data-cat-12: #115E59 !important;
+  --qs-data-cat-other: #737373 !important;
+  --qs-content: #fff !important;
+  --qs-main: #f9f9fb !important;
+  --qs-primary-foreground: #131920 !important;
+  --qs-secondary-foreground: #656871 !important;
+  --qs-tertiary-foreground: #656871 !important;
+  --qs-placeholder-foreground: #656871 !important;
+  --qs-divider: #dedee3 !important;
+  --qs-default-border: #8c8c94 !important;
+  --qs-neutral-soft: #b4b4bb !important;
+  --qs-neutral-gray-50: #f9fafb !important;
+  --qs-tertiary-background: #f9fafb !important;
+  --qs-action-hover: #f3f3f7 !important;
+  --qs-primary-default: #4200db !important;
+  --qs-primary-dark: #35009e !important;
+  --qs-primary-medium: #8575ff !important;
+  --qs-primary-light: #e8e6ff !important;
+  --qs-primary-inverse: #fff !important;
+  --qs-success-default: #00802f !important;
+  --qs-success-dark: #00471e !important;
+  --qs-success-light: #d9ffd6 !important;
+  --qs-error-default: #db0000 !important;
+  --qs-error-dark: #700000 !important;
+  --qs-warning-default: #f2b100 !important;
+  --qs-warning-dark: #573a00 !important;
+  --qs-warning-light: #fffbbd !important;
+  --qs-info-default: #006ce0 !important;
+  --qs-info-dark: #002a66 !important;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --safe-top: 0.0px !important;
+  --safe-bottom: 0.0px !important;
+  --safe-left: 0.0px !important;
+  --safe-right: 0.0px !important;
+  --qs-action-active: #e8e6ff !important;
+  --qs-action-active-hover: #b2a8ff !important;
+  --qs-action-disabled: #f3f3f7 !important;
+  --qs-active-border: #4200db !important;
+  --qs-application-navbar: #4200db !important;
+  --qs-application-navbar-dark: #35009e !important;
+  --qs-application-navbar-foreground: #fff !important;
+  --qs-application-navbar-light: #e8e6ff !important;
+  --qs-automation-dark: #660052 !important;
+  --qs-automation-default: #d600ba !important;
+  --qs-automation-light: #ffe0fb !important;
+  --qs-automation-medium: #b3008f !important;
+  --qs-automation-soft: #ff94f1 !important;
+  --qs-avatar-blue-bg: #d1f1ff !important;
+  --qs-avatar-blue-fg: #002a66 !important;
+  --qs-avatar-fuchsia-bg: #fce6ff !important;
+  --qs-avatar-fuchsia-fg: #590066 !important;
+  --qs-avatar-green-bg: #d9ffd6 !important;
+  --qs-avatar-green-fg: #00471e !important;
+  --qs-avatar-neutral-bg: #dedee3 !important;
+  --qs-avatar-neutral-fg: #131920 !important;
+  --qs-avatar-orange-bg: #ffe0d6 !important;
+  --qs-avatar-orange-fg: #661800 !important;
+  --qs-avatar-pink-bg: #ffe0fb !important;
+  --qs-avatar-pink-fg: #660052 !important;
+  --qs-avatar-primary-bg: #e8e6ff !important;
+  --qs-avatar-primary-fg: #35009e !important;
+  --qs-avatar-red-bg: #ffe0e0 !important;
+  --qs-avatar-red-fg: #700000 !important;
+  --qs-avatar-violet-bg: #f2e5ff !important;
+  --qs-avatar-violet-fg: #45008a !important;
+  --qs-avatar-yellow-bg: #fffbbd !important;
+  --qs-avatar-yellow-fg: #573a00 !important;
+  --qs-blue-100: #e2ebff !important;
+  --qs-blue-1000: #060d27 !important;
+  --qs-blue-200: #c2d5ff !important;
+  --qs-blue-300: #9fbdff !important;
+  --qs-blue-400: #7ea0fc !important;
+  --qs-blue-50: #fafbff !important;
+  --qs-blue-500: #517df6 !important;
+  --qs-blue-600: #2d5fe8 !important;
+  --qs-blue-700: #1d3cb9 !important;
+  --qs-blue-800: #162c85 !important;
+  --qs-blue-900: #102165 !important;
+  --qs-blue-950: #0b1746 !important;
+  --qs-brand: #fff !important;
+  --qs-brand-foreground: #131920 !important;
+  --qs-brand-navbar: #131920 !important;
+  --qs-brand-navbar-dark: #000 !important;
+  --qs-brand-navbar-foreground: #fff !important;
+  --qs-brand-navbar-light: #dedee3 !important;
+  --qs-coachmark: #006ce0 !important;
+  --qs-connection-dark: #661800 !important;
+  --qs-connection-default: #db3300 !important;
+  --qs-connection-light: #ffe0d6 !important;
+  --qs-connection-soft: #ff997a !important;
+  --qs-content-inverse: #333843 !important;
+  --qs-content-inverse-active: #131920 !important;
+  --qs-contrast-foreground: #131920 !important;
+  --qs-control-selected-bg: #4200db !important;
+  --qs-control-selected-hover-bg: #35009e !important;
+  --qs-darkpurple1-100: #eee1ef !important;
+  --qs-darkpurple1-1000: #130b14 !important;
+  --qs-darkpurple1-200: #dcc0dd !important;
+  --qs-darkpurple1-300: #c99ecc !important;
+  --qs-darkpurple1-400: #b57ab8 !important;
+  --qs-darkpurple1-50: #f8f2f8 !important;
+  --qs-darkpurple1-500: #97529b !important;
+  --qs-darkpurple1-600: #754078 !important;
+  --qs-darkpurple1-700: #542e57 !important;
+  --qs-darkpurple1-800: #472749 !important;
+  --qs-darkpurple1-900: #341c35 !important;
+  --qs-darkpurple1-950: #241325 !important;
+  --qs-darkpurple2-100: #f1e3fc !important;
+  --qs-darkpurple2-1000: #1b042f !important;
+  --qs-darkpurple2-200: #e7d0fb !important;
+  --qs-darkpurple2-300: #d6b0f8 !important;
+  --qs-darkpurple2-400: #be81f3 !important;
+  --qs-darkpurple2-50: #f8f1fe !important;
+  --qs-darkpurple2-500: #a652ef !important;
+  --qs-darkpurple2-600: #8e24eb !important;
+  --qs-darkpurple2-700: #7413c9 !important;
+  --qs-darkpurple2-800: #580e98 !important;
+  --qs-darkpurple2-900: #36095d !important;
+  --qs-darkpurple2-950: #260642 !important;
+  --qs-data-categorical-01: #4338ca !important;
+  --qs-data-categorical-02: #d97706 !important;
+  --qs-data-categorical-03: #0891b2 !important;
+  --qs-data-categorical-04: #8b5cf6 !important;
+  --qs-data-categorical-05: #15803d !important;
+  --qs-data-categorical-06: #0c4a6e !important;
+  --qs-data-categorical-07: #d946ef !important;
+  --qs-data-categorical-08: #65a30d !important;
+  --qs-data-categorical-09: #1d4ed8 !important;
+  --qs-data-categorical-10: #831843 !important;
+  --qs-data-categorical-11: #c2410c !important;
+  --qs-data-categorical-12: #115e59 !important;
+  --qs-data-categorical-other: #737373 !important;
+  --qs-data-divergent-negative: #ea580c !important;
+  --qs-data-divergent-positive: #4f46e5 !important;
+  --qs-data-divergent-red-green-negative: #dc2626 !important;
+  --qs-data-divergent-red-green-positive: #16a34a !important;
+  --qs-data-missing: #d4d4d4 !important;
+  --qs-data-sentiment-neutral: #737373 !important;
+  --qs-data-sentiment-warning: #9e6900 !important;
+  --qs-data-sequential-duochromatic-high: #1e1b4b !important;
+  --qs-data-sequential-duochromatic-low: #8b5cf6 !important;
+  --qs-data-sequential-monochromatic-high: #4f46e5 !important;
+  --qs-default-badge: #b4b4bb !important;
+  --qs-default-badge-dot: #656871 !important;
+  --qs-dimension: #4200db !important;
+  --qs-dimension-experimental: #4200db !important;
+  --qs-dimension-experimental-foreground: #4200db !important;
+  --qs-dimension-foreground: #fff !important;
+  --qs-disabled: #8c8c94 !important;
+  --qs-disabled-border: #dedee3 !important;
+  --qs-disabled-foreground: #b4b4bb !important;
+  --qs-divider-light: #f3f3f7 !important;
+  --qs-error-active-border: #db0000 !important;
+  --qs-error-border: #ffe0e0 !important;
+  --qs-error-foreground: #db0000 !important;
+  --qs-error-inverse: #fff !important;
+  --qs-error-light: #ffe0e0 !important;
+  --qs-error-medium: #900 !important;
+  --qs-error-soft: #ff9e9e !important;
+  --qs-focus-offset: 1px !important;
+  --qs-font-base-letter-spacing: .15px !important;
+  --qs-font-display: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-gradient-automation-light-stop: #ffe0fb !important;
+  --qs-gradient-automation-medium-stop: #b3008f !important;
+  --qs-gradient-automation-stop: #d600ba !important;
+  --qs-gradient-connection-light-stop: #ffe0d6 !important;
+  --qs-gradient-connection-stop: #db3300 !important;
+  --qs-gradient-insight-light-stop: #fce6ff !important;
+  --qs-gradient-insight-stop: #a000b8 !important;
+  --qs-gradient-visualization-light-stop: #f2e5ff !important;
+  --qs-gradient-visualization-stop: #7300e5 !important;
+  --qs-green-100: #ccffd8 !important;
+  --qs-green-1000: #001409 !important;
+  --qs-green-200: #a9efba !important;
+  --qs-green-300: #84d39a !important;
+  --qs-green-400: #71c68c !important;
+  --qs-green-50: #f0fff3 !important;
+  --qs-green-500: #5bbe7a !important;
+  --qs-green-600: #3c955a !important;
+  --qs-green-700: #227340 !important;
+  --qs-green-800: #00441f !important;
+  --qs-green-900: #003317 !important;
+  --qs-green-950: #002410 !important;
+  --qs-grid-gap: 16px !important;
+  --qs-grid-gap-xl: 24px !important;
+  --qs-hero-banner-button-hover: color-mix(in srgb, #fff, transparent 60%) !important;
+  --qs-hover-border: #333843 !important;
+  --qs-info-inverse: #fff !important;
+  --qs-info-light: #d1f1ff !important;
+  --qs-info-medium: #003b8f !important;
+  --qs-info-soft: #75cfff !important;
+  --qs-insight-dark: #590066 !important;
+  --qs-insight-default: #a000b8 !important;
+  --qs-insight-light: #fce6ff !important;
+  --qs-insight-soft: #f299ff !important;
+  --qs-main-foreground: #131920 !important;
+  --qs-main-secondary-foreground: #656871 !important;
+  --qs-measure: #00802f !important;
+  --qs-measure-experimental: #f2b100 !important;
+  --qs-measure-experimental-foreground: #f2b100 !important;
+  --qs-measure-foreground: #fff !important;
+  --qs-neutral-0: #fff !important;
+  --qs-neutral-100: #f5f3ef !important;
+  --qs-neutral-1000: #0b0a0a !important;
+  --qs-neutral-200: #ece9e4 !important;
+  --qs-neutral-300: #e2dfda !important;
+  --qs-neutral-400: #cdc9c1 !important;
+  --qs-neutral-50: #faf9f7 !important;
+  --qs-neutral-500: #adaaa3 !important;
+  --qs-neutral-600: #94918b !important;
+  --qs-neutral-700: #7d7a73 !important;
+  --qs-neutral-800: #5e5b56 !important;
+  --qs-neutral-900: #3a3936 !important;
+  --qs-neutral-950: #1b1a18 !important;
+  --qs-neutral-black: #000 !important;
+  --qs-neutral-dark: #333843 !important;
+  --qs-neutral-deep: #656871 !important;
+  --qs-neutral-default: #dedee3 !important;
+  --qs-neutral-light: #f3f3f7 !important;
+  --qs-neutral-lightest: #f9f9fb !important;
+  --qs-neutral-medium: #8c8c94 !important;
+  --qs-neutral-strong: #131920 !important;
+  --qs-neutral-white: #fff !important;
+  --qs-overlay: color-mix(in srgb, #131920, transparent 50%) !important;
+  --qs-popover-border: transparent !important;
+  --qs-primary-inverse-foreground: #fff !important;
+  --qs-primary-soft: #b2a8ff !important;
+  --qs-progress-active: #4200db !important;
+  --qs-red-100: #ffe4e1 !important;
+  --qs-red-1000: #240004 !important;
+  --qs-red-200: #ffc7c2 !important;
+  --qs-red-300: #ffa099 !important;
+  --qs-red-400: #eb6560 !important;
+  --qs-red-50: #fff6f5 !important;
+  --qs-red-500: #c33c38 !important;
+  --qs-red-600: #aa2b2b !important;
+  --qs-red-700: #8a0f0f !important;
+  --qs-red-800: #6e000d !important;
+  --qs-red-900: #57000a !important;
+  --qs-red-950: #3d0007 !important;
+  --qs-secondary: #dedee3 !important;
+  --qs-secondary-dark: #b4b4bb !important;
+  --qs-secondary-light: #f3f3f7 !important;
+  --qs-shadow: #00000029 !important;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029 !important;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029 !important;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029 !important;
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029 !important;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029 !important;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029 !important;
+  --qs-spice: #ff9800 !important;
+  --qs-success-inverse: #fff !important;
+  --qs-success-medium: #005c26 !important;
+  --qs-success-soft: #aeffa8 !important;
+  --qs-tag-default: #dedee3 !important;
+  --qs-tag-soft-border: #b4b4bb !important;
+  --qs-toggle-tile-lg: calc(.25rem * 15) !important;
+  --qs-toggle-tile-md: calc(.25rem * 12) !important;
+  --qs-toggle-tile-sm: calc(.25rem * 8) !important;
+  --qs-transparent: transparent !important;
+  --qs-visualization-dark: #45008a !important;
+  --qs-visualization-default: #7300e5 !important;
+  --qs-visualization-light: #f2e5ff !important;
+  --qs-visualization-soft: #d4a8ff !important;
+  --qs-warning-experimental: #f2b100 !important;
+  --qs-warning-experimental-light: #fffbbd !important;
+  --qs-warning-experimental-light-foreground: #fffbbd !important;
+  --qs-warning-inverse: #573a00 !important;
+  --qs-warning-medium: #db9200 !important;
+  --qs-warning-soft: #ffed4d !important;
+  --qs-width-modal-lg: 1136px !important;
+  --qs-width-modal-md: 600px !important;
+  --qs-width-modal-sm: 384px !important;
+  --qs-yellow-100: #fff5cf !important;
+  --qs-yellow-1000: #1f1100 !important;
+  --qs-yellow-200: #ffe79e !important;
+  --qs-yellow-300: #fbd86f !important;
+  --qs-yellow-400: #facb3d !important;
+  --qs-yellow-50: #fffcf0 !important;
+  --qs-yellow-500: #e2ac36 !important;
+  --qs-yellow-600: #ca8d2b !important;
+  --qs-yellow-700: #9d672f !important;
+  --qs-yellow-800: #7a4c19 !important;
+  --qs-yellow-900: #522e00 !important;
+  --qs-yellow-950: #381f00 !important;
+  --qs-duration-reorder: .125s !important;
+  --qs-ease-reorder: ease-in-out !important;
+  --z-subtask-modal: 10000 !important;
+  --z-above-subtask-modal: 10001 !important;
+  --react-pdf-text-layer: 1 !important;
+  --highlight-bg-color: rgba(180, 0, 170, 1) !important;
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1) !important;
+  --react-pdf-annotation-layer: 1 !important;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>") !important;
+  --input-focus-border-color: Highlight !important;
+  --input-focus-outline: 1px solid Canvas !important;
+  --input-unfocused-border-color: transparent !important;
+  --input-disabled-border-color: transparent !important;
+  --input-hover-border-color: black !important;
+  --link-outline: none !important;
+  --flow-size-overview-canvas-min-height: 480px !important;
+}</style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Komander Dispatch Web v1.0</title>
-    <style>
+    <title>Komander Dispatch Web v1.3</title>
+    <style nonce="XELvRBp3ZsW+nk/EWIq2qg==">
         :root {
             --bg-primary: #0a0e17;
             --bg-secondary: #111827;
             --bg-card: #1a2332;
-            --bg-card-hover: #1f2b3d;
             --border-card: #2a3a52;
             --accent: #FF9900;
             --accent-hover: #FFB84D;
@@ -19,15 +527,9 @@
             --text-secondary: #BDC3C7;
             --text-muted: #7F8C8D;
             --ok-green: #2ECC71;
-            --ok-green-bg: rgba(46, 204, 113, 0.12);
-            --fail-red: #E74C3C;
-            --fail-red-bg: rgba(231, 76, 60, 0.12);
+            --fail-red: rgb(231, 76, 60);
             --under-blue: #3498DB;
-            --over-orange: #FF9800;
-            --dev-pos: #E74C3C;
-            --dev-neg: #3498DB;
-            --dev-zero: #2ECC71;
-            --progress-bg: #1A1A2E;
+            --progress-bg: rgb(26, 26, 46);
             --navy: #232F3E;
             --navy-light: #37475A;
             --navy-dark: #191E26;
@@ -41,20 +543,22 @@
             --transition: 0.2s ease;
         }
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { font-size: 14px; scroll-behavior: smooth; }
+        html { font-size: 14px; }
         body { font-family: var(--font-main); background: var(--bg-primary); color: var(--text-primary); min-height: 100vh; display: flex; flex-direction: column; }
         .header { background: var(--bg-secondary); border-bottom: 1px solid var(--border-card); padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
         .header-left { display: flex; align-items: center; gap: 12px; }
-        .header-logo { font-size: 1.5rem; font-weight: 800; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; }
+        .header-logo { font-size: 1.5rem; font-weight: 800; color: var(--accent); letter-spacing: 3px; }
         .header-version { font-size: 0.72rem; color: var(--text-secondary); background: var(--accent-dim); padding: 3px 10px; border-radius: 4px; border: 1px solid rgba(255, 153, 0, 0.3); font-weight: 600; }
         .header-right { text-align: right; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.5; }
         .header-right .name { color: var(--text-primary); font-weight: 600; }
         .controls { background: var(--bg-secondary); border-bottom: 1px solid var(--border-card); padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
         .ctrl-separator { width: 1px; height: 28px; background: var(--border-card); margin: 0 2px; }
-        .btn { padding: 8px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-card); background: var(--btn-bg); color: var(--text-primary); font-family: var(--font-main); font-size: 0.85rem; cursor: pointer; transition: all var(--transition); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; user-select: none; }
+        .btn { padding: 8px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-card); background: var(--btn-bg); color: var(--text-primary); font-family: var(--font-main); font-size: 0.85rem; cursor: pointer; transition: all var(--transition); white-space: nowrap; user-select: none; }
         .btn:hover { background: var(--btn-hover); border-color: var(--accent); }
         .btn:active { transform: scale(0.97); }
-        .btn-primary { background: #27AE60; border-color: #27AE60; color: #fff; font-weight: 700; letter-spacing: 0.5px; }
+        .btn.locked { opacity: 0.45; pointer-events: none; }
+        #btnBalance.locked { pointer-events: auto; cursor: not-allowed; }
+        .btn-primary { background: #27AE60; border-color: #27AE60; color: #fff; font-weight: 700; }
         .btn-primary:hover { background: #2ECC71; border-color: #2ECC71; }
         .btn-compare { background: #2980B9; border-color: #2980B9; color: #fff; }
         .btn-compare:hover { background: #3498DB; border-color: #3498DB; }
@@ -65,107 +569,163 @@
         .control-group { display: flex; align-items: center; gap: 6px; }
         .control-group label { font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap; }
         .control-input { width: 58px; padding: 7px 8px; border-radius: var(--radius-sm); border: 1px solid var(--accent); background: var(--navy-light); color: var(--text-primary); font-family: var(--font-mono); font-size: 0.9rem; text-align: center; }
-        .control-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(255, 153, 0, 0.2); }
-        .control-select { padding: 7px 12px; border-radius: var(--radius-sm); border: 1px solid var(--accent); background: var(--navy-light); color: var(--text-primary); font-family: var(--font-main); font-size: 0.85rem; cursor: pointer; min-width: 220px; }
-        .control-select:focus { outline: none; border-color: var(--accent); }
-        .file-name-display { font-size: 0.75rem; color: var(--text-muted); font-style: italic; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .control-select { padding: 7px 12px; border-radius: var(--radius-sm); border: 1px solid var(--accent); background: var(--navy-light); color: var(--text-primary); font-size: 0.85rem; cursor: pointer; min-width: 220px; }
+        .control-input:focus, .control-select:focus { outline: none; box-shadow: 0 0 0 2px rgba(255, 153, 0, 0.25); }
+        .file-name-display { font-size: 0.75rem; color: var(--text-muted); font-style: italic; white-space: nowrap; }
         .file-name-display.loaded { color: var(--ok-green); font-style: normal; font-weight: 600; }
+        .files-panel { display: none; background: var(--bg-secondary); border-bottom: 1px solid var(--border-card); padding: 8px 24px; gap: 8px; flex-wrap: wrap; align-items: center; }
+        .files-panel.active { display: flex; }
+        .files-label { font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-right: 4px; }
+        .file-chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 6px 4px 10px; background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 14px; font-size: 0.75rem; }
+        .file-chip .fc-name { color: var(--text-primary); font-weight: 600; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .file-chip .fc-stats { color: var(--accent); font-family: var(--font-mono); }
+        .file-chip .fc-remove { width: 18px; height: 18px; border-radius: 50%; border: none; background: var(--navy-light); color: var(--text-primary); cursor: pointer; font-size: 0.7rem; line-height: 18px; }
+        .file-chip .fc-remove:hover { background: var(--fail-red); }
+        .files-dup { font-size: 0.72rem; color: var(--accent); margin-left: 6px; }
+        .btn-clear { padding: 4px 10px; font-size: 0.72rem; border-radius: 12px; }
         .metrics-panel { background: var(--bg-secondary); border-bottom: 2px solid var(--accent); padding: 12px 24px; display: flex; gap: 10px; flex-wrap: wrap; }
-        .metric-card { flex: 1; min-width: 120px; padding: 10px 12px; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-card); display: flex; flex-direction: column; align-items: center; transition: border-color var(--transition); }
+        .metric-card { flex: 1; min-width: 120px; padding: 10px 12px; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-card); display: flex; flex-direction: column; align-items: center; }
         .metric-card:hover { border-color: var(--accent); }
         .metric-label { font-size: 0.68rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
         .metric-value { font-size: 1.5rem; font-weight: 700; font-family: var(--font-mono); color: var(--accent); line-height: 1.2; }
         .metric-detail { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
         .blocks-container { flex: 1; padding: 16px 24px; overflow-x: auto; }
         .blocks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; min-height: 300px; }
-        .block-column { background: var(--navy-dark); border-radius: var(--radius-md); border: 1px solid var(--navy-light); display: flex; flex-direction: column; box-shadow: var(--shadow-card); transition: border-color var(--transition); overflow: hidden; animation: fadeInUp 0.3s ease both; }
+        .block-column { background: var(--navy-dark); border-radius: var(--radius-md); border: 1px solid var(--navy-light); display: flex; flex-direction: column; box-shadow: var(--shadow-card); overflow: hidden; animation: fadeInUp 0.3s ease both; }
         .block-column:hover { border-color: rgba(255, 153, 0, 0.4); }
         .block-header { padding: 8px 10px; background: var(--navy); border-bottom: 1px solid var(--navy-light); display: flex; justify-content: space-between; align-items: center; }
         .block-header-left { display: flex; align-items: center; gap: 6px; }
         .block-accent-bar { width: 4px; height: 22px; border-radius: 2px; flex-shrink: 0; }
-        .block-title { font-weight: 700; font-size: 0.9rem; color: var(--text-primary); }
+        .block-title { font-weight: 700; font-size: 0.9rem; }
         .block-stats { font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-secondary); }
-        .block-badge { padding: 2px 10px; border-radius: 10px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; color: #fff; }
+        .block-badge { padding: 2px 10px; border-radius: 10px; font-size: 0.7rem; font-weight: 700; color: #fff; }
         .badge-ok { background: var(--ok-green); }
         .badge-fail { background: var(--fail-red); }
         .block-progress-wrap { padding: 4px 10px; }
         .progress-bar { height: 6px; background: var(--progress-bg); border-radius: 3px; overflow: hidden; }
         .progress-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
         .block-sep { height: 1px; margin: 0 8px; }
-        .block-associate { padding: 0 8px 6px; }
-        .associate-input { width: 100%; padding: 5px 8px; border-radius: var(--radius-sm); border: 1px solid var(--navy-light); background: #1B2631; color: var(--text-primary); font-size: 0.78rem; font-family: var(--font-main); }
+        .block-associate { padding: 6px 8px; }
+        .associate-input { width: 100%; padding: 5px 8px; border-radius: var(--radius-sm); border: 1px solid var(--navy-light); background: #1B2631; color: var(--text-primary); font-size: 0.78rem; }
         .associate-input::placeholder { color: var(--text-muted); }
         .associate-input:focus { outline: none; border-color: var(--accent); }
         .route-list { flex: 1; padding: 3px 6px 6px; display: flex; flex-direction: column; gap: 3px; max-height: 420px; overflow-y: auto; }
-        .route-list::-webkit-scrollbar { width: 4px; }
-        .route-list::-webkit-scrollbar-track { background: transparent; }
-        .route-list::-webkit-scrollbar-thumb { background: var(--border-card); border-radius: 4px; }
-        .route-card { display: flex; justify-content: space-between; align-items: center; padding: 5px 8px; background: #2C3E50; border-radius: var(--radius-sm); border: 1px solid #3D5166; transition: all var(--transition); }
-        .route-card:hover { background: var(--navy-light); border-color: var(--accent); }
-        .route-card.route-selected { background: var(--navy-light); border-color: var(--accent); }
-        .route-name { font-weight: 600; font-size: 0.85rem; color: var(--text-primary); }
+        .route-card { display: flex; justify-content: space-between; align-items: center; padding: 5px 8px; background: #2C3E50; border-radius: var(--radius-sm); border: 1px solid #3D5166; cursor: pointer; }
+        .route-card:hover, .route-card.route-selected { background: var(--navy-light); border-color: var(--accent); }
+        .route-name { font-weight: 600; font-size: 0.85rem; }
         .route-pkgs { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: var(--accent); }
-        .route-btn { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(--border-card); background: var(--btn-bg); color: var(--text-muted); font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all var(--transition); flex-shrink: 0; }
-        .route-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-        .block-footer { padding: 4px 10px; background: var(--navy); border-top: 1px solid var(--navy-light); text-align: center; border-radius: 0 0 var(--radius-md) var(--radius-md); }
+        .route-btn { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(--border-card); background: var(--btn-bg); color: var(--text-muted); cursor: pointer; flex-shrink: 0; }
+        .route-btn:hover { background: var(--accent); color: #fff; }
+        .block-footer { padding: 4px 10px; background: var(--navy); border-top: 1px solid var(--navy-light); text-align: center; }
         .block-footer-text { font-size: 0.75rem; font-family: var(--font-mono); font-weight: 600; }
-        .empty-state { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 24px; text-align: center; }
+        .empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 24px; text-align: center; }
         .empty-icon { font-size: 2.5rem; margin-bottom: 16px; opacity: 0.4; }
         .empty-title { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 6px; }
         .empty-sub { font-size: 0.8rem; color: var(--text-muted); }
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); z-index: 200; align-items: center; justify-content: center; }
         .modal-overlay.active { display: flex; }
-        .modal-box { background: var(--navy-dark); border: 1px solid var(--navy-light); border-radius: var(--radius-md); padding: 24px; min-width: 320px; max-width: 90vw; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); }
+        .modal-box { background: var(--navy-dark); border: 1px solid var(--navy-light); border-radius: var(--radius-md); padding: 24px; min-width: 320px; max-width: 95vw; max-height: 90vh; overflow: auto; }
         .modal-title { font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 16px; text-align: center; }
-        .modal-select { width: 100%; padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--navy-light); background: var(--navy); color: var(--text-primary); font-size: 0.9rem; margin-bottom: 16px; }
+        .modal-select { width: 100%; padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--navy-light); background: var(--navy); color: var(--text-primary); margin-bottom: 16px; }
         .modal-btns { display: flex; gap: 10px; justify-content: center; }
-        .modal-btn { padding: 8px 20px; border-radius: var(--radius-sm); border: none; font-family: var(--font-main); font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+        .modal-btn { padding: 8px 20px; border-radius: var(--radius-sm); border: none; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
         .modal-btn-ok { background: var(--accent); color: var(--navy-dark); }
-        .modal-btn-ok:hover { background: var(--accent-hover); }
         .modal-btn-cancel { background: var(--navy-light); color: var(--text-primary); }
-        .modal-btn-cancel:hover { background: #4A6274; }
         .compare-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-        .compare-table th { background: var(--navy); color: var(--accent); padding: 8px 6px; font-size: 0.75rem; text-align: center; border: 1px solid var(--navy-light); }
-        .compare-table td { padding: 6px; font-size: 0.8rem; text-align: center; border: 1px solid var(--navy-light); color: var(--text-primary); }
+        .compare-table th { background: var(--navy); color: var(--accent); padding: 8px 6px; font-size: 0.75rem; border: 1px solid var(--navy-light); }
+        .compare-table td { padding: 6px; font-size: 0.8rem; text-align: center; border: 1px solid var(--navy-light); }
         .compare-table .rec-row { background: rgba(255, 153, 0, 0.1); }
-        .footer { background: var(--bg-secondary); border-top: 1px solid var(--border-card); padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; color: var(--text-muted); }
+        .footer { background: var(--bg-secondary); border-top: 1px solid var(--border-card); padding: 8px 24px; display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); }
         .footer-brand { color: var(--accent); font-weight: 600; }
-        .footer-status { max-width: 60%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+        .footer-status { max-width: 65%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .route-card.route-exp { border-left: 3px solid #1ABC9C; }
+        .route-card.route-exp .route-name { color: #1ABC9C; }
+        .hist-table { width: 100%; border-collapse: collapse; }
+        .hist-table th { background: var(--navy); color: var(--accent); padding: 6px; font-size: 0.72rem; border: 1px solid var(--navy-light); position: sticky; top: 0; }
+        .hist-table td { padding: 5px 6px; font-size: 0.75rem; text-align: center; border: 1px solid var(--navy-light); white-space: nowrap; }
+        .hist-wrap { max-height: 60vh; overflow: auto; }
+        .kd-overlay { z-index: 500; }
+        .kd-box { min-width: 380px; max-width: 560px; border-top: 4px solid var(--accent); }
+        .kd-box.kd-error { border-top-color: var(--fail-red); }
+        .kd-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+        .kd-icon { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; flex-shrink: 0; background: var(--accent); color: var(--navy-dark); }
+        .kd-error .kd-icon { background: var(--fail-red); color: #fff; }
+        .kd-title { font-size: 1rem; font-weight: 700; color: var(--text-primary); }
+        .kd-msg { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55; white-space: pre-line; margin-bottom: 14px; }
+        .kd-msg b { color: var(--accent); }
+        .kd-fix { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+        .kd-fix .modal-btn { background: #27AE60; color: #fff; }
+        .kd-fix .modal-btn:hover { background: #2ECC71; }
+        .btn.shake { animation: shake 0.35s; }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+        .route-menu { position: fixed; z-index: 400; min-width: 210px; background: var(--navy-dark); border: 1px solid var(--accent); border-radius: var(--radius-sm); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); padding: 4px; display: none; }
+        .route-menu.active { display: block; }
+        .route-menu-head { padding: 6px 10px; font-size: 0.72rem; color: var(--text-muted); border-bottom: 1px solid var(--navy-light); margin-bottom: 4px; }
+        .route-menu-head b { color: var(--accent); }
+        .route-menu-item { display: block; width: 100%; text-align: left; padding: 8px 10px; background: transparent; border: none; border-radius: 4px; color: var(--text-primary); font-size: 0.85rem; cursor: pointer; font-family: var(--font-main); }
+        .route-menu-item:hover { background: var(--navy-light); color: var(--accent); }
+        .route-menu-item small { color: var(--text-muted); margin-left: 6px; }
+        .copy-area { width: 100%; height: 220px; background: #0d1420; color: var(--text-primary); border: 1px solid var(--navy-light); border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; padding: 8px; margin-bottom: 12px; resize: vertical; }
+        .audit-box { width: 960px; max-width: 96vw; }
+        .audit-stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 10px; }
+        .audit-stat { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-sm); padding: 8px; text-align: center; }
+        .audit-stat .as-l { font-size: 0.65rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
+        .audit-stat .as-v { font-size: 1.4rem; font-weight: 700; font-family: var(--font-mono); color: var(--accent); }
+        .audit-stat.st-ok .as-v { color: var(--ok-green); }
+        .audit-stat.st-bad .as-v { color: var(--fail-red); }
+        .audit-stat.st-warn .as-v { color: #F1C40F; }
+        .audit-banner { text-align: center; font-weight: 700; padding: 6px; border-radius: var(--radius-sm); margin-bottom: 10px; font-size: 0.9rem; background: var(--bg-card); color: var(--text-secondary); }
+        .audit-banner.done { background: rgba(46, 204, 113, 0.18); color: var(--ok-green); }
+        .audit-banner.alert { background: rgba(231, 76, 60, 0.18); color: var(--fail-red); }
+        .audit-input { width: 100%; padding: 12px 14px; font-size: 1.1rem; font-family: var(--font-mono); background: #0d1420; color: var(--text-primary); border: 2px solid var(--accent); border-radius: var(--radius-sm); margin-bottom: 10px; }
+        .audit-input:focus { outline: none; box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.25); }
+        .audit-input.flash-ok { border-color: var(--ok-green); }
+        .audit-input.flash-bad { border-color: var(--fail-red); background: rgba(231, 76, 60, 0.15); }
+        .audit-cols { display: grid; grid-template-columns: 3fr 2fr; gap: 10px; margin-bottom: 12px; }
+        .audit-sub { font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .audit-list { height: 280px; overflow-y: auto; background: #0d1420; border: 1px solid var(--navy-light); border-radius: var(--radius-sm); padding: 4px; font-family: var(--font-mono); font-size: 0.8rem; }
+        .al-row { display: flex; justify-content: space-between; gap: 8px; padding: 3px 6px; border-radius: 3px; margin-bottom: 2px; }
+        .al-row .al-st { font-weight: 700; white-space: nowrap; }
+        .al-ok { color: var(--ok-green); }
+        .al-dup { background: rgba(241, 196, 15, 0.15); color: #F1C40F; }
+        .al-otra { background: rgba(231, 76, 60, 0.18); color: #FF8A7A; }
+        .al-fuera { background: rgba(231, 76, 60, 0.30); color: #FFB3A7; }
+        .al-miss { color: #FF8A7A; }
+        .audit-btns { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-        @media (max-width: 1400px) { .blocks-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; } .metric-card { min-width: 100px; padding: 8px 10px; } .metric-value { font-size: 1.3rem; } html { font-size: 13px; } }
+        @media (max-width: 1400px) { .blocks-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; } .metric-value { font-size: 1.3rem; } html { font-size: 13px; } }
     </style>
 </head>
-
-
 <body>
     <header class="header">
         <div class="header-left">
             <span class="header-logo">KOMANDER</span>
-            <span class="header-version">DISPATCH WEB v1.0</span>
+            <span class="header-version">DISPATCH WEB v1.5.2</span>
         </div>
         <div class="header-right">
             <span class="name">Daniel Diaz Paez</span><br>
             DSL1 | Ops Intelligence
         </div>
     </header>
+
     <div class="controls">
-        <button class="btn btn-csv" id="btnLoadCSV" onclick="document.getElementById('csvInput').click()">Cargar CSV</button>
-        <input type="file" id="csvInput" accept=".csv" style="display:none">
+        <button class="btn btn-csv" id="btnLoadCSV">Cargar CSV(s)</button>
+        <input type="file" id="csvInput" accept=".csv" multiple="" style="display: none;">
         <span class="file-name-display" id="fileName">Sin archivo</span>
         <div class="ctrl-separator"></div>
         <div class="control-group">
-            <label>Bloques:</label>
+            <label for="numBlocks">Bloques:</label>
             <input type="number" class="control-input" id="numBlocks" value="9" min="2" max="15">
         </div>
         <div class="control-group">
-            <label>Max Rutas:</label>
+            <label for="maxRoutes">Max Rutas:</label>
             <input type="number" class="control-input" id="maxRoutes" value="7" min="3" max="15">
         </div>
         <div class="ctrl-separator"></div>
-        <button class="btn btn-primary" id="btnBalance">GENERAR BALANCEO</button>
+        <button class="btn btn-primary locked" id="btnBalance">GENERAR BALANCEO</button>
         <div class="ctrl-separator"></div>
         <div class="control-group">
-            <label>Estrategia:</label>
+            <label for="strategy">Estrategia:</label>
             <select class="control-select" id="strategy">
                 <option value="1">1. Equitativo Paquetes</option>
                 <option value="2">2. Equitativo Rutas</option>
@@ -175,10 +735,23 @@
             </select>
         </div>
         <div class="ctrl-separator"></div>
-        <button class="btn btn-compare" id="btnCompare">Comparar Estrategias</button>
-        <button class="btn" id="btnUndo">Deshacer</button>
-        <button class="btn btn-summary" id="btnSummary">Resumen del Dia</button>
+        <div class="control-group">
+            <label for="expMode">Expansiones:</label>
+            <select class="control-select" id="expMode" style="min-width: 170px;">
+                <option value="auto">Auto (mejor varianza)</option>
+                <option value="inicio">Al inicio</option>
+                <option value="repartidas">Repartidas</option>
+            </select>
+        </div>
+        <div class="ctrl-separator"></div>
+        <button class="btn btn-compare locked" id="btnCompare">Comparar Estrategias</button>
+        <button class="btn locked" id="btnUndo">Deshacer</button>
+        <button class="btn btn-summary locked" id="btnSummary">Resumen del Dia</button>
+        <button class="btn" id="btnHistory">Historial</button>
     </div>
+
+    <div class="files-panel" id="filesPanel"></div>
+
     <div class="metrics-panel">
         <div class="metric-card"><span class="metric-label">Total Paquetes</span><span class="metric-value" id="metricTotal">---</span></div>
         <div class="metric-card"><span class="metric-label">Promedio / Bloque</span><span class="metric-value" id="metricAvg">---</span></div>
@@ -188,16 +761,13 @@
         <div class="metric-card"><span class="metric-label">Bloques</span><span class="metric-value" id="metricBlocks">---</span><span class="metric-detail">configurados</span></div>
         <div class="metric-card"><span class="metric-label">Total Rutas</span><span class="metric-value" id="metricRoutes">---</span></div>
         <div class="metric-card"><span class="metric-label">Bloques OK</span><span class="metric-value" id="metricOK">---</span><span class="metric-detail" id="metricVarPct">varianza %</span></div>
+        <div class="metric-card"><span class="metric-label">Expansiones</span><span class="metric-value" id="metricExp">---</span><span class="metric-detail" id="metricExpDetail">rutas no principales</span></div>
     </div>
+
     <div class="blocks-container">
-        <div class="blocks-grid" id="blocksGrid">
-            <div class="empty-state" style="grid-column: 1 / -1;">
-                <div class="empty-icon">[ ]</div>
-                <div class="empty-title">Carga un archivo CSV para comenzar</div>
-                <div class="empty-sub">Komander balanceara automaticamente tus rutas en bloques</div>
-            </div>
-        </div>
+        <div class="blocks-grid" id="blocksGrid"></div>
     </div>
+
     <div class="modal-overlay" id="moveModal">
         <div class="modal-box">
             <div class="modal-title" id="moveModalTitle">Mover ruta</div>
@@ -208,8 +778,9 @@
             </div>
         </div>
     </div>
+
     <div class="modal-overlay" id="compareModal">
-        <div class="modal-box" style="min-width: 700px; max-width: 95vw; overflow-x: auto;">
+        <div class="modal-box" style="min-width: 700px;">
             <div class="modal-title">RESUMEN COMPARATIVO DE ESTRATEGIAS</div>
             <div id="compareBody"></div>
             <div class="modal-btns" style="margin-top: 16px;">
@@ -217,635 +788,1746 @@
             </div>
         </div>
     </div>
+
+    <div class="modal-overlay" id="historyModal">
+        <div class="modal-box" style="min-width: 900px;">
+            <div class="modal-title">HISTORIAL DE BALANCEOS</div>
+            <div id="historyBody"></div>
+            <div class="modal-btns" style="margin-top: 16px;">
+                <button class="modal-btn modal-btn-ok" id="historyExport">Exportar Excel</button>
+                <button class="modal-btn modal-btn-cancel" id="historyClear">Borrar historial</button>
+                <button class="modal-btn modal-btn-cancel" id="historyClose">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay kd-overlay" id="kdModal">
+        <div class="modal-box kd-box" id="kdBox">
+            <div class="kd-head"><div class="kd-icon" id="kdIcon">!</div><div class="kd-title" id="kdTitle">Aviso</div></div>
+            <div class="kd-msg" id="kdMsg"></div>
+            <div class="kd-fix" id="kdFix"></div>
+            <div class="modal-btns" id="kdBtns"></div>
+        </div>
+    </div>
+
+    <div class="route-menu" id="routeMenu"></div>
+
+    <div class="modal-overlay" id="copyModal">
+        <div class="modal-box" style="min-width: 380px;">
+            <div class="modal-title" id="copyTitle">Paquetes</div>
+            <div class="kd-msg" id="copyHint" style="text-align: center;"></div>
+            <textarea class="copy-area" id="copyArea" readonly=""></textarea>
+            <div class="modal-btns">
+                <button class="modal-btn modal-btn-ok" id="copyAgain">Copiar</button>
+                <button class="modal-btn modal-btn-cancel" id="copyClose">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="auditModal">
+        <div class="modal-box audit-box">
+            <div class="modal-title" id="auditTitle">Auditar ruta</div>
+            <div class="audit-stats" id="auditStats"></div>
+            <div class="audit-banner" id="auditBanner">Escanea los paquetes de la ruta</div>
+            <input type="text" class="audit-input" id="auditInput" placeholder="Escanea aqui (o pega varios Tracking IDs)" autocomplete="off" spellcheck="false">
+            <div class="audit-cols">
+                <div><div class="audit-sub">Escaneos (el ultimo arriba)</div><div class="audit-list" id="auditLog"></div></div>
+                <div><div class="audit-sub" id="auditMissTitle">Faltantes</div><div class="audit-list" id="auditMiss"></div></div>
+            </div>
+            <div class="audit-btns">
+                <button class="modal-btn modal-btn-cancel" id="auditUndo">Deshacer ultimo</button>
+                <button class="modal-btn modal-btn-ok" id="auditCopyMiss">Copiar faltantes</button>
+                <button class="modal-btn modal-btn-ok" id="auditCopyExtra">Copiar sobrantes</button>
+                <button class="modal-btn modal-btn-ok" id="auditExport">Exportar auditoria</button>
+                <button class="modal-btn modal-btn-cancel" id="auditReset">Reiniciar</button>
+                <button class="modal-btn modal-btn-cancel" id="auditClose">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
-        <span class="footer-status" id="footerStatus"><span class="footer-brand">Komander Dispatch Web v1.0</span> | Listo</span>
+        <span class="footer-status" id="footerStatus"></span>
         <span>Daniel Diaz Paez | DSL1 | Amazon Last Mile</span>
     </footer>
 
-
     <script>
-        (function() {
-            "use strict";
-            var UMBRAL_SEMAFORO = 0.20;
-            var STRATEGY_NAMES = ["1. Equitativo Paquetes","2. Equitativo Rutas","3. Carga Frontal +15%","4. Carga al Centro +20%","5. Olas Alternadas"];
-            var BLOCK_COLORS = ["#FF9900","#3498DB","#2ECC71","#9B59B6","#E74C3C","#1ABC9C","#F39C12","#8E44AD","#16A085","#D35400","#2980B9","#C0392B","#27AE60","#D4AC0D","#7D3C98"];
-            var state = {csvLoaded:false,routesData:{},sortedKeys:[],allResults:null,currentStrategyIdx:0,blocks:[],objetivoPkgs:0,selectedRoute:null,selectedBlockIdx:-1,associates:{},undoStack:[],redoStack:[]};
-            var dom = {csvInput:document.getElementById("csvInput"),fileName:document.getElementById("fileName"),numBlocks:document.getElementById("numBlocks"),maxRoutes:document.getElementById("maxRoutes"),strategy:document.getElementById("strategy"),btnBalance:document.getElementById("btnBalance"),btnCompare:document.getElementById("btnCompare"),btnUndo:document.getElementById("btnUndo"),btnSummary:document.getElementById("btnSummary"),blocksGrid:document.getElementById("blocksGrid"),metricTotal:document.getElementById("metricTotal"),metricAvg:document.getElementById("metricAvg"),metricVariance:document.getElementById("metricVariance"),metricVarianceDetail:document.getElementById("metricVarianceDetail"),metricMax:document.getElementById("metricMax"),metricMaxDetail:document.getElementById("metricMaxDetail"),metricMin:document.getElementById("metricMin"),metricMinDetail:document.getElementById("metricMinDetail"),metricBlocks:document.getElementById("metricBlocks"),metricRoutes:document.getElementById("metricRoutes"),metricOK:document.getElementById("metricOK"),metricVarPct:document.getElementById("metricVarPct"),footerStatus:document.getElementById("footerStatus"),moveModal:document.getElementById("moveModal"),moveModalTitle:document.getElementById("moveModalTitle"),moveModalSelect:document.getElementById("moveModalSelect"),moveModalOk:document.getElementById("moveModalOk"),moveModalCancel:document.getElementById("moveModalCancel"),compareModal:document.getElementById("compareModal"),compareBody:document.getElementById("compareBody"),compareClose:document.getElementById("compareClose")};
-            function parseRouteCode(rc) {
-                var prefix = "";
-                var numStr = "";
-                var foundDigit = false;
-                for (var i = 0; i < rc.length; i++) {
-                    var ch = rc.charAt(i);
-                    if (ch >= "0" && ch <= "9") { foundDigit = true; numStr += ch; }
-                    else if (!foundDigit) { prefix += ch; }
-                    else { break; }
+    (function () {
+        "use strict";
+
+        var APP_VERSION = "Komander Dispatch Web v1.5.2";
+        var UMBRAL_SEMAFORO = 0.20;
+        var STRATEGY_NAMES = [
+            "1. Equitativo Paquetes",
+            "2. Equitativo Rutas",
+            "3. Carga Frontal +15%",
+            "4. Carga al Centro +20%",
+            "5. Olas Alternadas"
+        ];
+        var BLOCK_COLORS = [
+            "#FF9900", "#3498DB", "#2ECC71", "#9B59B6", "rgb(231,76,60)",
+            "#1ABC9C", "#F39C12", "#8E44AD", "#16A085", "#D35400",
+            "#2980B9", "#C0392B", "#27AE60", "#D4AC0D", "#7D3C98"
+        ];
+        var COLOR_RED = "rgb(231,76,60)";
+        var COLOR_BLUE = "#3498DB";
+        var COLOR_GREEN = "#2ECC71";
+
+        var state = {
+            files: [],
+            rejected: [],
+            routesData: {},
+            sortedKeys: [],
+            duplicates: 0,
+            allResults: null,
+            currentStrategyIdx: 0,
+            blocks: [],
+            objetivoPkgs: 0,
+            selectedRoute: null,
+            selectedBlockIdx: -1,
+            associates: {},
+            undoStack: [],
+            redoStack: [],
+            expMode: "auto",
+            appliedMode: "inicio",
+            mainPrefix: "",
+            mainKeys: [],
+            expKeys: [],
+            expSet: {}
+        };
+
+        function $(id) { return document.getElementById(id); }
+
+        var dom = {
+            btnLoadCSV: $("btnLoadCSV"),
+            csvInput: $("csvInput"),
+            fileName: $("fileName"),
+            filesPanel: $("filesPanel"),
+            numBlocks: $("numBlocks"),
+            maxRoutes: $("maxRoutes"),
+            strategy: $("strategy"),
+            btnBalance: $("btnBalance"),
+            btnCompare: $("btnCompare"),
+            btnUndo: $("btnUndo"),
+            btnSummary: $("btnSummary"),
+            blocksGrid: $("blocksGrid"),
+            metricTotal: $("metricTotal"),
+            metricAvg: $("metricAvg"),
+            metricVariance: $("metricVariance"),
+            metricVarianceDetail: $("metricVarianceDetail"),
+            metricMax: $("metricMax"),
+            metricMaxDetail: $("metricMaxDetail"),
+            metricMin: $("metricMin"),
+            metricMinDetail: $("metricMinDetail"),
+            metricBlocks: $("metricBlocks"),
+            metricRoutes: $("metricRoutes"),
+            metricOK: $("metricOK"),
+            metricVarPct: $("metricVarPct"),
+            footerStatus: $("footerStatus"),
+            moveModal: $("moveModal"),
+            moveModalTitle: $("moveModalTitle"),
+            moveModalSelect: $("moveModalSelect"),
+            moveModalOk: $("moveModalOk"),
+            moveModalCancel: $("moveModalCancel"),
+            compareModal: $("compareModal"),
+            compareBody: $("compareBody"),
+            compareClose: $("compareClose"),
+            expMode: $("expMode"),
+            btnHistory: $("btnHistory"),
+            metricExp: $("metricExp"),
+            metricExpDetail: $("metricExpDetail"),
+            historyModal: $("historyModal"),
+            historyBody: $("historyBody"),
+            historyClose: $("historyClose"),
+            historyExport: $("historyExport"),
+            historyClear: $("historyClear")
+        };
+
+        /* ===================== UTILIDADES ===================== */
+
+        function pad2(n) { return String(n).padStart(2, "0"); }
+
+        function escapeHtml(s) {
+            return String(s)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;");
+        }
+
+        function setStatus(msg) {
+            dom.footerStatus.innerHTML = '<span class="footer-brand">' + APP_VERSION + '</span> | ' + escapeHtml(msg);
+        }
+
+        function setLocked(btn, locked) {
+            if (locked) { btn.classList.add("locked"); } else { btn.classList.remove("locked"); }
+        }
+
+        /* ===================== VENTANAS DE AVISO (reemplazan alert/confirm del navegador) ===================== */
+
+        var kdQueue = [];
+        var kdOpen = false;
+
+        function kdShow(opts) {
+            kdQueue.push(opts);
+            if (!kdOpen) { kdNext(); }
+        }
+
+        function kdNext() {
+            var o = kdQueue.shift();
+            if (!o) { kdOpen = false; return; }
+            kdOpen = true;
+            var box = document.getElementById("kdBox");
+            box.className = "modal-box kd-box" + (o.type === "error" ? " kd-error" : "");
+            document.getElementById("kdIcon").textContent = o.type === "confirm" ? "?" : "!";
+            document.getElementById("kdTitle").textContent = o.title || "Aviso";
+            document.getElementById("kdMsg").innerHTML = o.html || escapeHtml(o.msg || "");
+            var fix = document.getElementById("kdFix");
+            fix.innerHTML = "";
+            (o.fixes || []).forEach(function (f) {
+                var b = document.createElement("button");
+                b.className = "modal-btn";
+                b.textContent = f.label;
+                b.addEventListener("click", function () { kdClose(); f.run(); });
+                fix.appendChild(b);
+            });
+            var btns = document.getElementById("kdBtns");
+            btns.innerHTML = "";
+            var ok = document.createElement("button");
+            ok.className = "modal-btn modal-btn-ok";
+            ok.textContent = o.okLabel || "OK";
+            ok.addEventListener("click", function () { kdClose(); if (o.onOk) { o.onOk(); } });
+            btns.appendChild(ok);
+            if (o.type === "confirm") {
+                var cn = document.createElement("button");
+                cn.className = "modal-btn modal-btn-cancel";
+                cn.textContent = "Cancelar";
+                cn.addEventListener("click", function () { kdClose(); });
+                btns.appendChild(cn);
+            }
+            document.getElementById("kdModal").classList.add("active");
+            setTimeout(function () { try { ok.focus(); } catch (e) { } }, 30);
+        }
+
+        function kdClose() {
+            document.getElementById("kdModal").classList.remove("active");
+            kdOpen = false;
+            setTimeout(kdNext, 0);
+        }
+
+        function kdAlert(title, msg, type) {
+            kdShow({ title: title, msg: msg, type: type || "warn" });
+            setStatus(title + ": " + String(msg).split("\n")[0]);
+        }
+
+        function kdConfirm(title, msg, onOk, okLabel) {
+            kdShow({ title: title, msg: msg, type: "confirm", onOk: onOk, okLabel: okLabel || "Si, continuar" });
+        }
+
+        function shake(btn) {
+            btn.classList.remove("shake");
+            void btn.offsetWidth;
+            btn.classList.add("shake");
+        }
+
+        function parseRouteCode(rc) {
+            var prefix = "";
+            var numStr = "";
+            var foundDigit = false;
+            for (var i = 0; i < rc.length; i++) {
+                var ch = rc.charAt(i);
+                if (ch >= "0" && ch <= "9") { foundDigit = true; numStr += ch; }
+                else if (!foundDigit) { prefix += ch; }
+                else { break; }
+            }
+            return { prefix: prefix.toUpperCase(), num: numStr ? parseInt(numStr, 10) : 0 };
+        }
+
+        function compareRoutes(a, b) {
+            var pa = parseRouteCode(a);
+            var pb = parseRouteCode(b);
+            if (pa.prefix < pb.prefix) { return -1; }
+            if (pa.prefix > pb.prefix) { return 1; }
+            if (pa.num !== pb.num) { return pa.num - pb.num; }
+            return a < b ? -1 : (a > b ? 1 : 0);
+        }
+
+        /* ===================== CSV ===================== */
+
+        function splitCsvLine(line, delim) {
+            var out = [];
+            var cur = "";
+            var inQ = false;
+            for (var i = 0; i < line.length; i++) {
+                var ch = line.charAt(i);
+                if (inQ) {
+                    if (ch === '"') {
+                        if (line.charAt(i + 1) === '"') { cur += '"'; i++; }
+                        else { inQ = false; }
+                    } else { cur += ch; }
+                } else if (ch === '"') {
+                    inQ = true;
+                } else if (ch === delim) {
+                    out.push(cur); cur = "";
+                } else {
+                    cur += ch;
                 }
-                return { prefix: prefix.toUpperCase(), num: numStr ? parseInt(numStr, 10) : 0 };
             }
-            function compareRoutes(a, b) {
-                var pa = parseRouteCode(a);
-                var pb = parseRouteCode(b);
-                if (pa.prefix < pb.prefix) return -1;
-                if (pa.prefix > pb.prefix) return 1;
-                return pa.num - pb.num;
+            out.push(cur);
+            return out;
+        }
+
+        var lastHeaders = [];
+        /* Regla DSL1: columna A = paquete, columna B = ruta (Route Code o Zone Code). Nombres no importan. */
+        function parseCSV(text) {
+            if (text.charCodeAt(0) === 0xFEFF) { text = text.slice(1); }
+            var lines = text.split(/\r?\n/).filter(function (l) { return l.trim() !== ""; });
+            if (lines.length < 2) { lastHeaders = []; return null; }
+            var first = lines[0];
+            var cnt = { ",": first.split(",").length, ";": first.split(";").length, "\t": first.split("\t").length };
+            var delim = ",";
+            if (cnt[";"] > cnt[delim]) { delim = ";"; }
+            if (cnt["\t"] > cnt[delim]) { delim = "\t"; }
+            lastHeaders = splitCsvLine(first, delim).map(function (x) { return x.trim(); });
+            if (lastHeaders.length < 2) { return null; }
+            var rows = [];
+            for (var i = 1; i < lines.length; i++) {
+                var cols = splitCsvLine(lines[i], delim);
+                var tid = (cols[0] || "").trim();
+                var rc = (cols[1] || "").trim();
+                if (!tid || !rc) { continue; }
+                rows.push({ tid: tid, rc: rc });
             }
-            function setStatus(msg) {
-                dom.footerStatus.innerHTML = '<span class="footer-brand">Komander Dispatch Web v1.0</span> | ' + msg;
-            }
-            function parseCSV(text) {
-                var lines = text.split(/\r?\n/).filter(function(l) { return l.trim() !== ""; });
-                if (lines.length < 2) return null;
-                var headers = lines[0].split(",").map(function(h) { return h.trim().toLowerCase().replace(/"/g, "").replace(/ /g, "_").replace(/-/g, "_"); });
-                var colTid = -1;
-                var colRoute = -1;
-                for (var hi = 0; hi < headers.length; hi++) {
-                    var hn = headers[hi];
-                    if (hn === "tracking_id" || hn === "trackingid" || hn === "tracking") colTid = hi;
-                    if (hn === "route_code" || hn === "routecode" || hn === "route") colRoute = hi;
-                }
-                if (colTid === -1 || colRoute === -1) return null;
-                var routesData = {};
-                for (var i = 1; i < lines.length; i++) {
-                    var cols = lines[i].split(",").map(function(c) { return c.trim().replace(/"/g, ""); });
-                    var tid = cols[colTid] || "";
-                    var rc = cols[colRoute] || "";
-                    if (!tid || !rc) continue;
-                    if (!routesData[rc]) routesData[rc] = [];
-                    routesData[rc].push(tid);
-                }
-                return routesData;
-            }
-            dom.csvInput.addEventListener("change", function() {
-                var file = this.files[0];
-                if (!file) return;
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    var text = e.target.result;
-                    var parsed = parseCSV(text);
-                    if (!parsed || Object.keys(parsed).length === 0) { alert("Error: CSV debe tener columnas Tracking ID y Route Code."); return; }
-                    state.routesData = parsed;
-                    state.sortedKeys = Object.keys(parsed).sort(compareRoutes);
-                    state.csvLoaded = true;
-                    state.allResults = null;
-                    state.blocks = [];
-                    state.undoStack = [];
-                    state.redoStack = [];
-                    var tr = state.sortedKeys.length;
-                    var tp = 0;
-                    state.sortedKeys.forEach(function(k) { tp += parsed[k].length; });
-                    dom.fileName.textContent = file.name;
-                    dom.fileName.classList.add("loaded");
-                    setStatus("CSV cargado: " + tr + " rutas, " + tp + " paquetes");
-                    dom.btnBalance.style.opacity = "1";
-                    dom.btnBalance.style.pointerEvents = "auto";
+            return rows;
+        }
+
+        function readFileText(file) {
+            return new Promise(function (resolve, reject) {
+                var r1 = new FileReader();
+                r1.onerror = function () { reject(new Error("No se pudo leer " + file.name)); };
+                r1.onload = function () {
+                    var txt = r1.result;
+                    if (txt.indexOf("\uFFFD") === -1) { resolve(txt); return; }
+                    var r2 = new FileReader();
+                    r2.onerror = function () { resolve(txt); };
+                    r2.onload = function () { resolve(r2.result); };
+                    r2.readAsText(file, "ISO-8859-1");
                 };
-                reader.readAsText(file, "UTF-8");
-                this.value = "";
+                r1.readAsText(file, "UTF-8");
             });
-            function BalancingEngine(routesData, numBlocks, maxRoutes, sortedKeys) {
-                this.routesData = routesData;
-                this.numBlocks = numBlocks;
-                this.maxRoutes = maxRoutes;
-                this.sortedKeys = sortedKeys;
-                this.totalPackages = 0;
-                this.totalRoutes = sortedKeys.length;
-                var self = this;
-                sortedKeys.forEach(function(k) { self.totalPackages += routesData[k].length; });
-                this.objetivoPkgs = this.totalPackages / numBlocks;
-                this.objetivoRutas = this.totalRoutes / numBlocks;
+        }
+
+        function rebuildMerged() {
+            var merged = {};
+            var seen = {};
+            var dups = 0;
+            state.files.forEach(function (f) {
+                f.nuevos = 0;
+                f.rows.forEach(function (row) {
+                    if (seen[row.tid]) { dups++; return; }
+                    f.nuevos++;
+                    seen[row.tid] = true;
+                    if (!merged[row.rc]) { merged[row.rc] = []; }
+                    merged[row.rc].push(row.tid);
+                });
+            });
+            state.routesData = merged;
+            state.sortedKeys = Object.keys(merged).sort(compareRoutes);
+            state.duplicates = dups;
+            tidMap = null;
+            detectExpansions();
+        }
+
+        function totalMergedPkgs() {
+            var tp = 0;
+            state.sortedKeys.forEach(function (k) { tp += state.routesData[k].length; });
+            return tp;
+        }
+
+        function resetBalance() {
+            state.allResults = null;
+            state.blocks = [];
+            state.undoStack = [];
+            state.redoStack = [];
+            state.selectedRoute = null;
+            state.selectedBlockIdx = -1;
+            setLocked(dom.btnCompare, true);
+            setLocked(dom.btnUndo, true);
+            setLocked(dom.btnSummary, true);
+            setLocked(dom.btnBalance, state.files.length === 0);
+            renderBlocks();
+            clearMetrics();
+        }
+
+        function renderFilesPanel() {
+            var rej = "";
+            (state.rejected || []).forEach(function (r) {
+                rej += '<span class="file-chip" style="border-color:rgb(231,76,60);"><span class="fc-name" style="color:rgb(231,76,60);max-width:none;">RECHAZADO: ' + escapeHtml(r) + '</span></span>';
+            });
+            if (state.files.length === 0 && rej) {
+                dom.filesPanel.innerHTML = rej;
+                dom.filesPanel.classList.add("active");
+                return;
             }
-            BalancingEngine.prototype._execute = function(stratId) {
-                var nb = this.numBlocks;
-                var mr = this.maxRoutes;
-                var objP = this.objetivoPkgs;
-                var objR = this.objetivoRutas;
-                var tr = this.totalRoutes;
-                var limInf = Math.max(1, Math.floor(nb * 0.4));
-                var medio = Math.floor(nb / 2);
-                var keys = this.sortedKeys;
-                var self = this;
-                var vals = [];
-                keys.forEach(function(k) { vals.push(self.routesData[k].length); });
-                var blocks = {};
-                for (var b = 0; b < nb; b++) { blocks[b] = []; }
-                var cur = 0;
-                var pkgsB = 0;
-                var rutasB = 0;
-                var buf = [];
-                for (var i = 0; i < tr; i++) {
-                    var objD;
-                    var bp;
-                    if (stratId === 1) { objD = objP; }
-                    else if (stratId === 2) { objD = objR; }
-                    else if (stratId === 3) { objD = (cur + 1) <= limInf ? objP * 1.15 : objP * 0.85; }
-                    else if (stratId === 4) { bp = cur + 1; objD = (bp >= medio && bp <= medio + 1) ? objP * 1.2 : objP * 0.85; }
-                    else if (stratId === 5) { bp = cur + 1; objD = bp % 2 === 1 ? objP * 1.2 : objP * 0.8; }
-                    else { objD = objP; }
-                    var cortar = false;
-                    if (cur < (nb - 1)) {
-                        var bf = nb - cur - 1;
-                        var rr = tr - i;
-                        var seguro = (rr <= bf * mr);
-                        if (rutasB >= mr) { cortar = true; }
-                        else if (seguro && rutasB > 0) {
-                            var va, vs;
-                            if (stratId === 2) { va = rutasB; vs = rutasB + 1; }
-                            else { va = pkgsB; vs = pkgsB + vals[i]; }
-                            var da = Math.abs(objD - va);
-                            var ds = Math.abs(objD - vs);
-                            if (ds > da && va >= (objD * 0.7)) { cortar = true; }
+            if (state.files.length === 0) {
+                dom.filesPanel.classList.remove("active");
+                dom.filesPanel.innerHTML = "";
+                dom.fileName.textContent = "Sin archivo";
+                dom.fileName.classList.remove("loaded");
+                return;
+            }
+            var h = '<span class="files-label">Archivos (' + state.files.length + '):</span>';
+            state.files.forEach(function (f, i) {
+                h += '<span class="file-chip" title="' + escapeHtml(f.name) + '">';
+                h += '<span class="fc-name">' + escapeHtml(f.name) + '</span>';
+                h += '<span class="fc-stats">' + f.routeCount + ' rutas / ' + f.rows.length + ' pkgs' + (f.nuevos < f.rows.length ? ' (' + f.nuevos + ' nuevos)' : '') + '</span>';
+                h += '<button class="fc-remove" data-idx="' + i + '" title="Quitar archivo">X</button>';
+                h += '</span>';
+            });
+            if (state.duplicates > 0) {
+                h += '<span class="files-dup">Duplicados removidos: ' + state.duplicates + '</span>';
+            }
+            h += rej;
+            h += '<button class="btn btn-clear" id="btnClearFiles">Limpiar todo</button>';
+            dom.filesPanel.innerHTML = h;
+            dom.filesPanel.classList.add("active");
+            dom.fileName.textContent = state.files.length === 1 ? state.files[0].name : (state.files.length + " archivos fusionados");
+            dom.fileName.classList.add("loaded");
+        }
+
+        function afterFilesChanged(msgPrefix) {
+            rebuildMerged();
+            renderFilesPanel();
+            resetBalance();
+            if (state.files.length === 0) {
+                setStatus("Listo | Carga uno o varios CSV para comenzar");
+                return;
+            }
+            var msg = msgPrefix + " | Total fusionado: " + state.sortedKeys.length + " rutas, " + totalMergedPkgs() + " paquetes";
+            if (state.duplicates > 0) { msg += " | Duplicados removidos: " + state.duplicates; }
+            setStatus(msg + " | Dale GENERAR BALANCEO");
+        }
+
+        function loadFiles(fileList) {
+            var files = Array.prototype.slice.call(fileList);
+            if (files.length === 0) { return; }
+            setStatus("Leyendo " + files.length + " archivo(s)...");
+            Promise.all(files.map(function (f) {
+                return readFileText(f).then(function (txt) {
+                    return { file: f, text: txt };
+                }, function () {
+                    return { file: f, text: null };
+                });
+            })).then(function (results) {
+                var added = 0;
+                var errors = [];
+                results.forEach(function (res) {
+                    var name = res.file.name;
+                    var exists = state.files.some(function (x) { return x.name === name && x.size === res.file.size; });
+                    if (exists) { errors.push(name + " (ya estaba cargado)"); return; }
+                    if (res.text === null) { errors.push(name + " (no se pudo leer)"); return; }
+                    var rows = parseCSV(res.text);
+                    if (!rows || rows.length === 0) { errors.push(name + " (columna A o B vacias. Encabezado: " + (lastHeaders.length ? lastHeaders.slice(0, 10).join(" | ") : "archivo vacio") + ")"); return; }
+                    var rset = {};
+                    rows.forEach(function (r) { rset[r.rc] = true; });
+                    state.files.push({ name: name, size: res.file.size, rows: rows, routeCount: Object.keys(rset).length });
+                    added++;
+                });
+                state.rejected = errors;
+                if (errors.length > 0) {
+                    kdAlert("Archivos no agregados", "Seleccionados: " + files.length + " | Agregados: " + added + "\n\n- " + errors.join("\n- "));
+                }
+                console.log("[Komander] Seleccionados: " + files.length + " | Agregados: " + added + " | Rechazados: " + errors.length, errors);
+                afterFilesChanged("Seleccionados: " + files.length + " | Agregados: " + added + (errors.length ? " | Rechazados: " + errors.length : ""));
+            });
+        }
+
+        dom.btnLoadCSV.addEventListener("click", function () { dom.csvInput.click(); });
+        dom.csvInput.addEventListener("change", function () {
+            loadFiles(this.files);
+            this.value = "";
+        });
+
+        dom.filesPanel.addEventListener("click", function (e) {
+            var t = e.target;
+            if (t.classList.contains("fc-remove")) {
+                var idx = parseInt(t.getAttribute("data-idx"), 10);
+                var removed = state.files[idx];
+                if (!removed) { return; }
+                kdConfirm("Quitar archivo", "Quitar " + removed.name + " del balanceo?", function () {
+                    state.files.splice(idx, 1);
+                    state.rejected = [];
+                    afterFilesChanged("Quitado: " + removed.name);
+                }, "Si, quitar");
+            } else if (t.id === "btnClearFiles") {
+                kdConfirm("Limpiar archivos", "Quitar todos los archivos cargados?", function () {
+                    state.files = [];
+                    state.rejected = [];
+                    afterFilesChanged("Archivos limpiados");
+                }, "Si, limpiar");
+            }
+        });
+
+        /* ===================== MOTOR DE BALANCEO (port fiel desktop) ===================== */
+
+        function BalancingEngine(routesData, numBlocks, maxRoutes, sortedKeys, targetPkgs, targetRoutes) {
+            var self = this;
+            this.routesData = routesData;
+            this.numBlocks = numBlocks;
+            this.maxRoutes = maxRoutes;
+            this.sortedKeys = sortedKeys;
+            this.totalRoutes = sortedKeys.length;
+            this.totalPackages = 0;
+            sortedKeys.forEach(function (k) { self.totalPackages += routesData[k].length; });
+            this.objetivoPkgs = (targetPkgs || this.totalPackages) / numBlocks;
+            this.objetivoRutas = (targetRoutes || this.totalRoutes) / numBlocks;
+        }
+
+        BalancingEngine.prototype.execute = function (stratId) {
+            var self = this;
+            var nb = this.numBlocks;
+            var mr = this.maxRoutes;
+            var objP = this.objetivoPkgs;
+            var objR = this.objetivoRutas;
+            var tr = this.totalRoutes;
+            var limInf = Math.max(1, Math.floor(nb * 0.4));
+            var medio = Math.floor(nb / 2);
+            var keys = this.sortedKeys;
+            var vals = keys.map(function (k) { return self.routesData[k].length; });
+            var blocks = {};
+            for (var b = 0; b < nb; b++) { blocks[b] = []; }
+            var cur = 0;
+            var pkgsB = 0;
+            var rutasB = 0;
+            var buf = [];
+            for (var i = 0; i < tr; i++) {
+                var objD;
+                var bp = cur + 1;
+                if (stratId === 1) { objD = objP; }
+                else if (stratId === 2) { objD = objR; }
+                else if (stratId === 3) { objD = (bp <= limInf) ? objP * 1.15 : objP * 0.85; }
+                else if (stratId === 4) { objD = (bp >= medio && bp <= medio + 1) ? objP * 1.2 : objP * 0.85; }
+                else if (stratId === 5) { objD = (bp % 2 === 1) ? objP * 1.2 : objP * 0.8; }
+                else { objD = objP; }
+                var cortar = false;
+                if (cur < (nb - 1)) {
+                    var bf = nb - cur - 1;
+                    var rr = tr - i;
+                    var seguro = (rr <= bf * mr);
+                    if (rutasB >= mr) {
+                        cortar = true;
+                    } else if (seguro && rutasB > 0) {
+                        var va;
+                        var vs;
+                        if (stratId === 2) { va = rutasB; vs = rutasB + 1; }
+                        else { va = pkgsB; vs = pkgsB + vals[i]; }
+                        var da = Math.abs(objD - va);
+                        var ds = Math.abs(objD - vs);
+                        if (ds > da && va >= (objD * 0.7)) { cortar = true; }
+                    }
+                }
+                if (cortar) {
+                    blocks[cur] = buf.slice();
+                    cur++;
+                    pkgsB = 0;
+                    rutasB = 0;
+                    buf = [];
+                }
+                buf.push({ name: keys[i], packages: vals[i] });
+                pkgsB += vals[i];
+                rutasB++;
+            }
+            blocks[cur] = buf.slice();
+            return blocks;
+        };
+
+        BalancingEngine.prototype.runAll = function () {
+            var results = [];
+            var objP = this.objetivoPkgs;
+            for (var sid = 1; sid <= 5; sid++) {
+                var dist = this.execute(sid);
+                var bpkgs = [];
+                var broutes = [];
+                for (var idx = 0; idx < this.numBlocks; idx++) {
+                    var lst = dist[idx] || [];
+                    var p = 0;
+                    lst.forEach(function (r) { p += r.packages; });
+                    bpkgs.push(p);
+                    broutes.push(lst.length);
+                }
+                var mx = Math.max.apply(null, bpkgs);
+                var mn = Math.min.apply(null, bpkgs);
+                var ok = 0;
+                bpkgs.forEach(function (v) { if (Math.abs(v - objP) <= objP * UMBRAL_SEMAFORO) { ok++; } });
+                results.push({
+                    id: sid, name: STRATEGY_NAMES[sid - 1], dist: dist,
+                    bpkgs: bpkgs, broutes: broutes, max: mx, min: mn, dif: mx - mn,
+                    varPct: objP > 0 ? (mx - mn) / objP : 0, ok: ok, totalB: this.numBlocks
+                });
+            }
+            return results;
+        };
+
+        /* ===================== EXPANSIONES ===================== */
+
+        function detectExpansions() {
+            var cnt = {};
+            state.sortedKeys.forEach(function (k) {
+                var pf = parseRouteCode(k).prefix;
+                cnt[pf] = (cnt[pf] || 0) + 1;
+            });
+            var main = "";
+            var best = -1;
+            Object.keys(cnt).forEach(function (pf) {
+                if (cnt[pf] > best) { best = cnt[pf]; main = pf; }
+            });
+            state.mainPrefix = main;
+            state.mainKeys = [];
+            state.expKeys = [];
+            state.expSet = {};
+            state.sortedKeys.forEach(function (k) {
+                if (parseRouteCode(k).prefix === main) { state.mainKeys.push(k); }
+                else { state.expKeys.push(k); state.expSet[k] = true; }
+            });
+        }
+
+        function expPkgs() {
+            var p = 0;
+            state.expKeys.forEach(function (k) { p += state.routesData[k].length; });
+            return p;
+        }
+
+        function modeLabel(m) {
+            if (m === "repartidas") { return "Repartidas"; }
+            if (m === "inicio") { return "Al inicio"; }
+            return "Auto";
+        }
+
+        function expLabel() {
+            if (!state.expKeys || state.expKeys.length === 0) { return "ninguna"; }
+            return state.expKeys.length + " rutas / " + expPkgs() + " pkgs (" + modeLabel(state.appliedMode) +
+                (state.expMode === "auto" ? ", elegido por Auto" : "") + ")";
+        }
+
+        function summarizeDist(sid, dist, nb, objP) {
+            var bpkgs = [];
+            var broutes = [];
+            for (var idx = 0; idx < nb; idx++) {
+                var lst = dist[idx] || [];
+                var p = 0;
+                lst.forEach(function (r) { p += r.packages; });
+                bpkgs.push(p);
+                broutes.push(lst.length);
+            }
+            var mx = Math.max.apply(null, bpkgs);
+            var mn = Math.min.apply(null, bpkgs);
+            var ok = 0;
+            bpkgs.forEach(function (v) { if (Math.abs(v - objP) <= objP * UMBRAL_SEMAFORO) { ok++; } });
+            return {
+                id: sid, name: STRATEGY_NAMES[sid - 1], dist: dist,
+                bpkgs: bpkgs, broutes: broutes, max: mx, min: mn, dif: mx - mn,
+                varPct: objP > 0 ? (mx - mn) / objP : 0, ok: ok, totalB: nb
+            };
+        }
+
+        function buildResults(mode, nb, mr) {
+            var total = totalMergedPkgs();
+            var objP = total / nb;
+            var res = [];
+            var sid;
+            if (mode !== "repartidas" || state.expKeys.length === 0 || state.mainKeys.length === 0) {
+                var eng = new BalancingEngine(state.routesData, nb, mr, state.sortedKeys);
+                for (sid = 1; sid <= 5; sid++) { res.push(summarizeDist(sid, eng.execute(sid), nb, objP)); }
+                return res;
+            }
+            var exps = state.expKeys.slice().sort(function (a, b) {
+                return state.routesData[b].length - state.routesData[a].length;
+            });
+            var variants = [
+                new BalancingEngine(state.routesData, nb, mr, state.mainKeys, total, state.sortedKeys.length),
+                new BalancingEngine(state.routesData, nb, mr, state.mainKeys),
+                new BalancingEngine(state.routesData, nb, Math.max(1, mr - 1), state.mainKeys)
+            ];
+            for (sid = 1; sid <= 5; sid++) {
+                var best = null;
+                variants.forEach(function (eng) {
+                    var dist = eng.execute(sid);
+                    var totals = [];
+                    var b;
+                    for (b = 0; b < nb; b++) {
+                        dist[b] = dist[b] || [];
+                        var t = 0;
+                        dist[b].forEach(function (r) { t += r.packages; });
+                        totals.push(t);
+                    }
+                    exps.forEach(function (k) {
+                        var pk = state.routesData[k].length;
+                        var tgt = -1;
+                        var i;
+                        for (i = 0; i < nb; i++) {
+                            if (dist[i].length < mr && (tgt === -1 || totals[i] < totals[tgt])) { tgt = i; }
                         }
-                    }
-                    if (cortar) { blocks[cur] = buf.slice(); cur++; pkgsB = 0; rutasB = 0; buf = []; }
-                    var rc = keys[i];
-                    buf.push({ name: rc, tids: self.routesData[rc], packages: vals[i] });
-                    pkgsB += vals[i];
-                    rutasB++;
-                }
-                blocks[cur] = buf.slice();
-                return blocks;
-            };
-            BalancingEngine.prototype.runAll = function() {
-                var results = [];
-                var self = this;
-                for (var sid = 1; sid <= 5; sid++) {
-                    var dist = this._execute(sid);
-                    var bpkgs = [];
-                    var broutes = [];
-                    for (var idx = 0; idx < this.numBlocks; idx++) {
-                        if (dist[idx] && dist[idx].length > 0) {
-                            var p = 0;
-                            dist[idx].forEach(function(r) { p += r.packages; });
-                            bpkgs.push(p);
-                            broutes.push(dist[idx].length);
-                        } else { bpkgs.push(0); broutes.push(0); }
-                    }
-                    var mx = Math.max.apply(null, bpkgs);
-                    var mn = Math.min.apply(null, bpkgs);
-                    var dif = mx - mn;
-                    var varPct = self.objetivoPkgs > 0 ? dif / self.objetivoPkgs : 0;
-                    var ok = 0;
-                    var objP = self.objetivoPkgs;
-                    bpkgs.forEach(function(p) { if (Math.abs(p - objP) <= (objP * UMBRAL_SEMAFORO)) { ok++; } });
-                    results.push({ id: sid, name: STRATEGY_NAMES[sid - 1], dist: dist, bpkgs: bpkgs, broutes: broutes, max: mx, min: mn, dif: dif, varPct: varPct, ok: ok, totalB: self.numBlocks });
-                }
-                return results;
-            };
-            function generate() {
-                if (!state.csvLoaded) { alert("Primero carga un CSV."); return; }
-                var nb = parseInt(dom.numBlocks.value, 10) || 9;
-                var mr = parseInt(dom.maxRoutes.value, 10) || 7;
-                if (nb < 2 || nb > 15) { alert("Bloques debe estar entre 2 y 15."); return; }
-                if (mr < 3 || mr > 15) { alert("Max Rutas debe estar entre 3 y 15."); return; }
-                var tr = state.sortedKeys.length;
-                var cap = nb * mr;
-                if (tr > cap) {
-                    var bn = Math.ceil(tr / mr);
-                    var rn = Math.ceil(tr / nb);
-                    alert("IMPOSIBLE: " + tr + " rutas no caben en " + nb + " bloques (max " + mr + ").\nCapacidad: " + cap + ". Sube bloques a " + bn + " o max rutas a " + rn + ".");
-                    return;
-                }
-                state.undoStack = [];
-                state.redoStack = [];
-                var engine = new BalancingEngine(state.routesData, nb, mr, state.sortedKeys);
-                state.allResults = engine.runAll();
-                state.objetivoPkgs = engine.objetivoPkgs;
-                var bestIdx = 0;
-                var bestVar = 999;
-                state.allResults.forEach(function(r, i) { if (r.varPct < bestVar) { bestVar = r.varPct; bestIdx = i; } });
-                dom.strategy.value = String(bestIdx + 1);
-                state.currentStrategyIdx = bestIdx;
-                applyStrategy(bestIdx);
-                var allBtns = [dom.btnBalance, dom.btnCompare, dom.btnUndo, dom.btnSummary];
-                allBtns.forEach(function(btn) { btn.style.opacity = "1"; btn.style.pointerEvents = "auto"; });
-                var tp = engine.totalPackages;
-                setStatus("5 estrategias | " + tr + " rutas, " + tp + " pqts | OK: " + state.allResults[bestIdx].ok + "/" + nb + " bloques | Mayor: " + STRATEGY_NAMES[bestIdx]);
+                        if (tgt === -1) {
+                            tgt = 0;
+                            for (i = 1; i < nb; i++) { if (totals[i] < totals[tgt]) { tgt = i; } }
+                        }
+                        dist[tgt].push({ name: k, packages: pk });
+                        totals[tgt] += pk;
+                    });
+                    var s = summarizeDist(sid, dist, nb, objP);
+                    if (!best || s.varPct < best.varPct) { best = s; }
+                });
+                res.push(best);
             }
-            function applyStrategy(idx) {
-                if (!state.allResults) return;
-                var res = state.allResults[idx];
-                state.currentStrategyIdx = idx;
-                state.blocks = [];
-                for (var i = 0; i < res.totalB; i++) {
-                    var routes = res.dist[i] || [];
-                    var total = 0;
-                    routes.forEach(function(r) { total += r.packages; });
-                    state.blocks.push({ id: i, routes: routes.map(function(r) { return { name: r.name, packages: r.packages, tids: r.tids }; }), total: total });
+            return res;
+        }
+
+        function minVar(results) {
+            var m = Infinity;
+            results.forEach(function (r) { if (r.varPct < m) { m = r.varPct; } });
+            return m;
+        }
+
+        function bestStrategyIdx() {
+            var bestIdx = 0;
+            var bestVar = Infinity;
+            state.allResults.forEach(function (r, i) {
+                if (r.varPct < bestVar) { bestVar = r.varPct; bestIdx = i; }
+            });
+            return bestIdx;
+        }
+
+        function generate() {
+            if (state.files.length === 0) { kdAlert("Sin datos", "Primero carga uno o varios CSV."); return; }
+            var nb = parseInt(dom.numBlocks.value, 10);
+            var mr = parseInt(dom.maxRoutes.value, 10);
+            if (isNaN(nb) || nb < 2 || nb > 15) { shake(dom.btnBalance); kdAlert("Validacion", "Bloques debe ser un numero entre 2 y 15."); return; }
+            if (isNaN(mr) || mr < 3 || mr > 15) { shake(dom.btnBalance); kdAlert("Validacion", "Max Rutas debe ser un numero entre 3 y 15."); return; }
+            var tr = state.sortedKeys.length;
+            var cap = nb * mr;
+            if (tr > cap) {
+                var nbNeed = Math.ceil(tr / mr);
+                var mrNeed = Math.ceil(tr / nb);
+                var fixes = [];
+                if (nbNeed <= 15) {
+                    fixes.push({ label: "Subir Bloques a " + nbNeed, run: function () { dom.numBlocks.value = String(nbNeed); saveConfig(); generate(); } });
                 }
+                if (mrNeed <= 15) {
+                    fixes.push({ label: "Subir Max Rutas a " + mrNeed, run: function () { dom.maxRoutes.value = String(mrNeed); saveConfig(); generate(); } });
+                }
+                shake(dom.btnBalance);
+                kdShow({
+                    title: "Configuracion Insuficiente",
+                    type: "error",
+                    html: "<b>IMPOSIBLE:</b> " + tr + " rutas no caben en " + nb + " bloques (max " + mr + ").<br>" +
+                        "Capacidad: <b>" + cap + "</b>. Sube bloques a <b>" + nbNeed + "</b> o max rutas a <b>" + mrNeed + "</b>." +
+                        (fixes.length === 0 ? "<br><br>Ni con 15 bloques o 15 rutas alcanza: sube los dos." : "<br><br>Corrigelo con un click:"),
+                    fixes: fixes
+                });
+                setStatus("IMPOSIBLE: " + tr + " rutas no caben en " + nb + " x " + mr + " = " + cap + " | Sube bloques a " + nbNeed + " o max rutas a " + mrNeed);
+                return;
+            }
+            detectExpansions();
+            var mode = dom.expMode.value;
+            state.expMode = mode;
+            var rIni = buildResults("inicio", nb, mr);
+            var hasExp = state.expKeys.length > 0 && state.mainKeys.length > 0;
+            var rRep = hasExp ? buildResults("repartidas", nb, mr) : rIni;
+            var applied;
+            if (!hasExp) { applied = "inicio"; }
+            else if (mode === "auto") { applied = (minVar(rRep) < minVar(rIni)) ? "repartidas" : "inicio"; }
+            else { applied = mode; }
+            state.appliedMode = applied;
+            state.allResults = (applied === "repartidas") ? rRep : rIni;
+            state.objetivoPkgs = totalMergedPkgs() / nb;
+            var bestIdx = bestStrategyIdx();
+            dom.strategy.value = String(bestIdx + 1);
+            applyStrategy(bestIdx);
+            setLocked(dom.btnCompare, false);
+            setLocked(dom.btnUndo, false);
+            setLocked(dom.btnSummary, false);
+            saveConfig();
+            addHistory("Balanceo");
+            setStatus("5 estrategias | " + state.files.length + " archivo(s) | " + tr + " rutas, " + totalMergedPkgs() +
+                " pqts | Obj: " + Math.round(state.objetivoPkgs) + "/bloque | Mejor: " + STRATEGY_NAMES[bestIdx] +
+                " | Expansiones: " + expLabel());
+        }
+
+        function applyStrategy(idx) {
+            if (!state.allResults) { return; }
+            var res = state.allResults[idx];
+            state.currentStrategyIdx = idx;
+            state.blocks = [];
+            for (var i = 0; i < res.totalB; i++) {
+                var routes = (res.dist[i] || []).map(function (r) { return { name: r.name, packages: r.packages }; });
+                var total = 0;
+                routes.forEach(function (r) { total += r.packages; });
+                state.blocks.push({ id: i, routes: routes, total: total });
+            }
+            state.selectedRoute = null;
+            state.selectedBlockIdx = -1;
+            state.undoStack = [];
+            state.redoStack = [];
+            renderBlocks();
+            updateMetrics();
+        }
+
+        /* ===================== METRICAS ===================== */
+
+        function clearMetrics() {
+            [dom.metricTotal, dom.metricAvg, dom.metricVariance, dom.metricMax, dom.metricMin,
+                dom.metricBlocks, dom.metricRoutes, dom.metricOK].forEach(function (el) { el.textContent = "---"; });
+            dom.metricVarianceDetail.textContent = "max - min";
+            dom.metricMaxDetail.textContent = "nombre";
+            dom.metricMinDetail.textContent = "nombre";
+            dom.metricVarPct.textContent = "varianza %";
+            updateExpMetric();
+        }
+
+        function updateExpMetric() {
+            if (!state.expKeys || state.expKeys.length === 0) {
+                dom.metricExp.textContent = state.sortedKeys.length > 0 ? "0" : "---";
+                dom.metricExpDetail.textContent = state.sortedKeys.length > 0 ? "solo " + state.mainPrefix : "rutas no principales";
+                return;
+            }
+            dom.metricExp.textContent = state.expKeys.length;
+            dom.metricExpDetail.textContent = expPkgs() + " pkgs" + (state.allResults ? " | " + modeLabel(state.appliedMode) : "");
+        }
+
+        function updateMetrics() {
+            if (state.blocks.length === 0) { clearMetrics(); return; }
+            var totalPkgs = 0;
+            var totalRoutes = 0;
+            var blockTotals = [];
+            var maxRoute = null;
+            var minRoute = null;
+            state.blocks.forEach(function (block) {
+                totalPkgs += block.total;
+                totalRoutes += block.routes.length;
+                blockTotals.push(block.total);
+                block.routes.forEach(function (r) {
+                    if (!maxRoute || r.packages > maxRoute.packages) { maxRoute = r; }
+                    if (!minRoute || r.packages < minRoute.packages) { minRoute = r; }
+                });
+            });
+            var obj = state.objetivoPkgs;
+            var maxB = Math.max.apply(null, blockTotals);
+            var minB = Math.min.apply(null, blockTotals);
+            var okCount = 0;
+            blockTotals.forEach(function (t) { if (Math.abs(t - obj) <= obj * UMBRAL_SEMAFORO) { okCount++; } });
+            dom.metricTotal.textContent = totalPkgs.toLocaleString();
+            dom.metricAvg.textContent = Math.round(obj).toLocaleString();
+            dom.metricVariance.textContent = (maxB - minB).toLocaleString();
+            dom.metricVarianceDetail.textContent = maxB + " - " + minB;
+            dom.metricMax.textContent = maxRoute ? maxRoute.packages : "---";
+            dom.metricMaxDetail.textContent = maxRoute ? maxRoute.name : "nombre";
+            dom.metricMin.textContent = minRoute ? minRoute.packages : "---";
+            dom.metricMinDetail.textContent = minRoute ? minRoute.name : "nombre";
+            dom.metricBlocks.textContent = state.blocks.length;
+            dom.metricRoutes.textContent = totalRoutes;
+            dom.metricOK.textContent = okCount + "/" + state.blocks.length;
+            updateExpMetric();
+            dom.metricVarPct.textContent = (obj > 0 ? ((maxB - minB) / obj * 100).toFixed(1) : "0") + "%";
+        }
+
+        /* ===================== RENDER ===================== */
+
+        function renderBlocks() {
+            if (state.blocks.length === 0) {
+                var sub = state.files.length > 0 ?
+                    "Archivos listos. Dale GENERAR BALANCEO." :
+                    "Puedes seleccionar varios archivos a la vez. Komander los fusiona en un solo balanceo.";
+                dom.blocksGrid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;">' +
+                    '<div class="empty-icon">[ ]</div>' +
+                    '<div class="empty-title">' + (state.files.length > 0 ? "CSV cargados" : "Carga uno o varios CSV para comenzar") + '</div>' +
+                    '<div class="empty-sub">' + sub + '</div></div>';
+                return;
+            }
+            var obj = state.objetivoPkgs;
+            var objRound = Math.round(obj);
+            var html = "";
+            state.blocks.forEach(function (block, idx) {
+                var accent = BLOCK_COLORS[idx % BLOCK_COLORS.length];
+                var dentro = Math.abs(block.total - obj) <= obj * UMBRAL_SEMAFORO;
+                var ratio = obj > 0 ? block.total / obj : 0;
+                var barColor = ratio <= 0.8 ? COLOR_BLUE : (ratio <= 1.2 ? COLOR_GREEN : COLOR_RED);
+                var dev = block.total - objRound;
+                var devTxt = dev > 0 ? "+" + dev : String(dev);
+                var devColor = dev > 0 ? COLOR_RED : (dev < 0 ? COLOR_BLUE : COLOR_GREEN);
+                var assocVal = state.associates["B" + (idx + 1)] || "";
+                html += '<div class="block-column" style="animation-delay:' + (idx * 0.04) + 's;">';
+                html += '<div class="block-header"><div class="block-header-left">';
+                html += '<div class="block-accent-bar" style="background:' + accent + ';"></div>';
+                html += '<span class="block-title">B' + (idx + 1) + ': ' + block.total + '</span>';
+                html += '<span class="block-stats">/' + objRound + '</span></div>';
+                html += '<span class="block-badge ' + (dentro ? "badge-ok" : "badge-fail") + '">' + (dentro ? "OK" : "X") + '</span></div>';
+                html += '<div class="block-progress-wrap"><div class="progress-bar"><div class="progress-fill" style="width:' +
+                    Math.min(ratio * 100, 100).toFixed(1) + '%;background:' + barColor + ';"></div></div></div>';
+                html += '<div class="block-sep" style="background:' + accent + ';"></div>';
+                html += '<div class="block-associate"><input type="text" class="associate-input" placeholder="Asociado / Alias..." data-block="B' +
+                    (idx + 1) + '" value="' + escapeHtml(assocVal) + '"></div>';
+                html += '<div class="route-list">';
+                block.routes.forEach(function (route) {
+                    var sel = (state.selectedRoute === route.name && state.selectedBlockIdx === idx) ? " route-selected" : "";
+                    if (state.expSet[route.name]) { sel += " route-exp"; }
+                    var rn = escapeHtml(route.name);
+                    html += '<div class="route-card' + sel + '" data-route="' + rn + '" data-block="' + idx + '">';
+                    html += '<span class="route-name">' + rn + '</span>';
+                    html += '<span class="route-pkgs">(' + route.packages + ')</span>';
+                    html += '<button class="route-btn" data-route="' + rn + '" data-block="' + idx + '" title="Opciones de la ruta">+</button></div>';
+                });
+                html += '</div>';
+                html += '<div class="block-footer"><span class="block-footer-text" style="color:' + devColor + ';">R:' +
+                    block.routes.length + ' | ' + devTxt + '</span></div>';
+                html += '</div>';
+            });
+            dom.blocksGrid.innerHTML = html;
+        }
+
+        dom.blocksGrid.addEventListener("input", function (e) {
+            if (e.target.classList.contains("associate-input")) {
+                state.associates[e.target.getAttribute("data-block")] = e.target.value;
+                saveConfig();
+            }
+        });
+
+        dom.blocksGrid.addEventListener("click", function (e) {
+            var t = e.target;
+            if (t.classList.contains("route-btn")) {
+                e.stopPropagation();
+                openRouteMenu(t, t.getAttribute("data-route"), parseInt(t.getAttribute("data-block"), 10));
+                return;
+            }
+            var card = t.closest ? t.closest(".route-card") : null;
+            if (!card) { return; }
+            var rName = card.getAttribute("data-route");
+            var bIdx = parseInt(card.getAttribute("data-block"), 10);
+            if (state.selectedRoute === rName && state.selectedBlockIdx === bIdx) {
                 state.selectedRoute = null;
                 state.selectedBlockIdx = -1;
-                state.undoStack = [];
+                setStatus("Deseleccionada");
+            } else {
+                state.selectedRoute = rName;
+                state.selectedBlockIdx = bIdx;
+                setStatus(rName + " (" + findRoute(bIdx, rName).packages + " pqts) seleccionada | Tecla 1-" +
+                    Math.min(9, state.blocks.length) + " para mover");
+            }
+            renderBlocks();
+        });
+
+        function findRoute(bIdx, rName) {
+            var found = null;
+            state.blocks[bIdx].routes.forEach(function (r) { if (r.name === rName) { found = r; } });
+            return found || { name: rName, packages: 0 };
+        }
+
+        /* ===================== MENU DE RUTA (copiar / mover) ===================== */
+
+        var routeMenu = document.getElementById("routeMenu");
+        var menuCtx = { route: null, block: -1 };
+
+        function closeRouteMenu() { routeMenu.classList.remove("active"); }
+
+        function openRouteMenu(btn, routeName, blockIdx) {
+            menuCtx.route = routeName;
+            menuCtx.block = blockIdx;
+            var tids = state.routesData[routeName] || [];
+            var h = '<div class="route-menu-head"><b>' + escapeHtml(routeName) + '</b> | ' + tids.length + ' paquetes | Bloque ' + (blockIdx + 1) + '</div>';
+            h += '<button class="route-menu-item" data-act="copy">Copiar paquetes del plan<small>(' + tids.length + ')</small></button>';
+            h += '<button class="route-menu-item" data-act="audit">Auditar ruta (escanear)' + auditMenuTag(routeName) + '</button>';
+            h += '<button class="route-menu-item" data-act="move">Mover ruta a otro bloque</button>';
+            routeMenu.innerHTML = h;
+            routeMenu.classList.add("active");
+            var r = btn.getBoundingClientRect();
+            var mw = routeMenu.offsetWidth || 220;
+            var mh = routeMenu.offsetHeight || 110;
+            var left = Math.min(r.left, window.innerWidth - mw - 8);
+            var top = r.bottom + 4;
+            if (top + mh > window.innerHeight - 8) { top = Math.max(8, r.top - mh - 4); }
+            routeMenu.style.left = Math.max(8, left) + "px";
+            routeMenu.style.top = top + "px";
+        }
+
+        routeMenu.addEventListener("click", function (e) {
+            e.stopPropagation();
+            var it = e.target.closest ? e.target.closest(".route-menu-item") : null;
+            if (!it) { return; }
+            var act = it.getAttribute("data-act");
+            closeRouteMenu();
+            if (act === "copy") { copyPackages(menuCtx.route); }
+            else if (act === "audit") { openAudit(menuCtx.route); }
+            else if (act === "move") { openMoveDialog(menuCtx.route, menuCtx.block); }
+        });
+        document.addEventListener("click", function (e) {
+            if (!routeMenu.contains(e.target)) { closeRouteMenu(); }
+        });
+        window.addEventListener("resize", closeRouteMenu);
+        document.addEventListener("scroll", closeRouteMenu, true);
+
+        /* ===================== COPIAR PAQUETES ===================== */
+
+        function fallbackCopy(text) {
+            var ta = document.createElement("textarea");
+            ta.value = text;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "fixed";
+            ta.style.top = "-1000px";
+            document.body.appendChild(ta);
+            ta.select();
+            var ok = false;
+            try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+            document.body.removeChild(ta);
+            return ok;
+        }
+
+        function copyText(text, onDone) {
+            if (navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(function () { onDone(true); }, function () { onDone(fallbackCopy(text)); });
+            } else {
+                onDone(fallbackCopy(text));
+            }
+        }
+
+        var copyModal = document.getElementById("copyModal");
+        var copyArea = document.getElementById("copyArea");
+
+        function copyPackages(routeName) {
+            var tids = state.routesData[routeName] || [];
+            if (tids.length === 0) { kdAlert("Sin paquetes", "La ruta " + routeName + " no tiene paquetes en el plan."); return; }
+            var text = tids.join("\n");
+            document.getElementById("copyTitle").textContent = routeName + " | " + tids.length + " paquetes";
+            copyArea.value = text;
+            copyText(text, function (ok) {
+                document.getElementById("copyHint").innerHTML = ok ?
+                    '<b>Copiados al portapapeles.</b> Pega con Ctrl+V en SCC, Excel o donde los ocupes.' :
+                    'El navegador no dejo copiar solo. Da click en <b>Copiar</b> o selecciona la lista con Ctrl+A y Ctrl+C.';
+                setStatus(ok ? (tids.length + " paquetes de " + routeName + " copiados") : "Copia manual: selecciona la lista");
+            });
+            copyModal.classList.add("active");
+        }
+
+        document.getElementById("copyAgain").addEventListener("click", function () {
+            copyArea.focus();
+            copyArea.select();
+            copyText(copyArea.value, function (ok) {
+                document.getElementById("copyHint").innerHTML = ok ? '<b>Copiados al portapapeles.</b>' : 'Lista seleccionada: presiona Ctrl+C.';
+            });
+        });
+        document.getElementById("copyClose").addEventListener("click", function () { copyModal.classList.remove("active"); });
+        copyModal.addEventListener("click", function (e) { if (e.target === copyModal) { copyModal.classList.remove("active"); } });
+
+        /* ===================== AUDITAR RUTA (escaneo) ===================== */
+
+        var audits = {};
+        var auditRoute = null;
+        var tidMap = null;
+        var auditModal = document.getElementById("auditModal");
+        var auditInput = document.getElementById("auditInput");
+
+        function getTidMap() {
+            if (!tidMap) {
+                tidMap = {};
+                Object.keys(state.routesData).forEach(function (rc) {
+                    state.routesData[rc].forEach(function (t) { tidMap[String(t).trim().toUpperCase()] = rc; });
+                });
+            }
+            return tidMap;
+        }
+
+        function nowHMS() {
+            var d = new Date();
+            return pad2(d.getHours()) + ":" + pad2(d.getMinutes()) + ":" + pad2(d.getSeconds());
+        }
+
+        function auditSummary(route) {
+            var a = audits[route];
+            var expected = (state.routesData[route] || []).map(function (t) { return String(t).trim().toUpperCase(); });
+            var res = { expected: expected.length, scans: 0, ok: 0, dup: 0, otra: 0, fuera: 0, missing: [], extras: [] };
+            if (!a) { res.missing = expected.slice(); return res; }
+            res.scans = a.scans.length;
+            a.scans.forEach(function (s) {
+                if (s.st === "DUP") { res.dup++; }
+                else if (s.st === "OTRA") { res.otra++; res.extras.push(s); }
+                else if (s.st === "FUERA") { res.fuera++; res.extras.push(s); }
+            });
+            expected.forEach(function (t) {
+                if (a.seen[t]) { res.ok++; } else { res.missing.push(t); }
+            });
+            return res;
+        }
+
+        function auditMenuTag(route) {
+            if (!audits[route] || audits[route].scans.length === 0) { return ""; }
+            var s = auditSummary(route);
+            return "<small>(" + s.ok + "/" + s.expected + ")</small>";
+        }
+
+        var actx = null;
+        function beep(ok) {
+            try {
+                if (!actx) {
+                    var AC = window.AudioContext || window.webkitAudioContext;
+                    if (!AC) { return; }
+                    actx = new AC();
+                }
+                var o = actx.createOscillator();
+                var g = actx.createGain();
+                o.type = ok ? "sine" : "square";
+                o.frequency.value = ok ? 880 : 200;
+                g.gain.value = 0.08;
+                o.connect(g);
+                g.connect(actx.destination);
+                o.start();
+                o.stop(actx.currentTime + (ok ? 0.08 : 0.4));
+            } catch (e) { }
+        }
+
+        function flashInput(ok) {
+            auditInput.classList.remove("flash-ok");
+            auditInput.classList.remove("flash-bad");
+            auditInput.classList.add(ok ? "flash-ok" : "flash-bad");
+            setTimeout(function () { auditInput.classList.remove("flash-ok"); auditInput.classList.remove("flash-bad"); }, ok ? 250 : 900);
+        }
+
+        function openAudit(route) {
+            auditRoute = route;
+            if (!audits[route]) { audits[route] = { scans: [], seen: {}, start: nowHMS() }; }
+            renderAudit();
+            auditModal.classList.add("active");
+            setTimeout(function () { try { auditInput.focus(); } catch (e) { } }, 50);
+        }
+
+        function processScan(raw) {
+            var code = String(raw || "").trim().toUpperCase();
+            if (!code || !auditRoute) { return null; }
+            var a = audits[auditRoute];
+            var owner = getTidMap()[code];
+            var st;
+            if (a.seen[code]) { st = "DUP"; }
+            else if (owner === auditRoute) { st = "OK"; }
+            else if (owner) { st = "OTRA"; }
+            else { st = "FUERA"; }
+            a.seen[code] = (a.seen[code] || 0) + 1;
+            a.scans.push({ tid: code, st: st, other: owner || "", t: nowHMS() });
+            return st;
+        }
+
+        function handleScanText(text) {
+            var parts = String(text || "").split(/[\s,;]+/).filter(function (x) { return x.trim() !== ""; });
+            if (parts.length === 0) { return; }
+            var allOk = true;
+            parts.forEach(function (pc) { var st = processScan(pc); if (st !== "OK") { allOk = false; } });
+            beep(allOk);
+            flashInput(allOk);
+            renderAudit();
+        }
+
+        function auditStatusText(s) {
+            if (s.st === "OK") { return ["OK", "al-ok", "En plan"]; }
+            if (s.st === "DUP") { return ["DUPLICADO", "al-dup", "Ya se habia escaneado"]; }
+            if (s.st === "OTRA") { return ["OTRA RUTA", "al-otra", "Es de " + s.other]; }
+            return ["NO ESTA EN PLAN", "al-fuera", "No aparece en ningun archivo cargado"];
+        }
+
+        function renderAudit() {
+            if (!auditRoute) { return; }
+            var s = auditSummary(auditRoute);
+            var a = audits[auditRoute];
+            document.getElementById("auditTitle").textContent = "AUDITAR " + auditRoute + " | " + s.expected + " paquetes en plan";
+            function card(l, v, cls) { return '<div class="audit-stat ' + (cls || "") + '"><div class="as-l">' + l + '</div><div class="as-v">' + v + '</div></div>'; }
+            var sobr = s.otra + s.fuera;
+            document.getElementById("auditStats").innerHTML =
+                card("En plan", s.expected) +
+                card("Escaneados", s.scans) +
+                card("Correctos", s.ok + "/" + s.expected, s.ok === s.expected && s.expected > 0 ? "st-ok" : "") +
+                card("Faltantes", s.missing.length, s.missing.length > 0 ? "st-bad" : "st-ok") +
+                card("Sobrantes", sobr, sobr > 0 ? "st-bad" : "st-ok") +
+                card("Duplicados", s.dup, s.dup > 0 ? "st-warn" : "st-ok");
+            var ban = document.getElementById("auditBanner");
+            if (s.scans === 0) {
+                ban.className = "audit-banner";
+                ban.textContent = "Escanea los paquetes de la ruta. Cada Enter del scanner registra un paquete.";
+            } else if (s.missing.length === 0 && sobr === 0) {
+                ban.className = "audit-banner done";
+                ban.textContent = "RUTA COMPLETA: " + s.ok + "/" + s.expected + " correctos" + (s.dup > 0 ? " (" + s.dup + " escaneos repetidos, no afectan)" : "");
+            } else {
+                ban.className = "audit-banner" + (sobr > 0 ? " alert" : "");
+                ban.textContent = "Faltan " + s.missing.length + " | Sobran " + sobr + (s.otra > 0 ? " (" + s.otra + " de otra ruta)" : "") + (s.fuera > 0 ? " (" + s.fuera + " fuera de plan)" : "");
+            }
+            var log = "";
+            for (var i = a.scans.length - 1; i >= 0; i--) {
+                var sc = a.scans[i];
+                var info = auditStatusText(sc);
+                log += '<div class="al-row ' + info[1] + '"><span>' + (i + 1) + '. ' + escapeHtml(sc.tid) + '</span><span class="al-st" title="' + escapeHtml(info[2]) + '">' + info[0] + (sc.st === "OTRA" ? " " + escapeHtml(sc.other) : "") + '</span></div>';
+            }
+            document.getElementById("auditLog").innerHTML = log || '<div class="empty-sub" style="padding:10px;">Sin escaneos</div>';
+            document.getElementById("auditMissTitle").textContent = "Faltantes (" + s.missing.length + ")";
+            var mh = "";
+            s.missing.forEach(function (t) { mh += '<div class="al-row al-miss"><span>' + escapeHtml(t) + '</span></div>'; });
+            document.getElementById("auditMiss").innerHTML = mh || '<div class="al-row al-ok"><span>Sin faltantes</span></div>';
+            if (state.blocks.length > 0) { setStatus("Auditando " + auditRoute + ": " + s.ok + "/" + s.expected + " | Faltan " + s.missing.length + " | Sobran " + sobr); }
+        }
+
+        auditInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === "Tab") {
+                e.preventDefault();
+                var v = auditInput.value;
+                auditInput.value = "";
+                handleScanText(v);
+            } else if (e.key === "Escape") {
+                auditModal.classList.remove("active");
+            }
+        });
+        auditInput.addEventListener("paste", function (e) {
+            var txt = (e.clipboardData || window.clipboardData) ? (e.clipboardData || window.clipboardData).getData("text") : "";
+            if (txt && /[\s,;]/.test(txt.trim())) {
+                e.preventDefault();
+                auditInput.value = "";
+                handleScanText(txt);
+            }
+        });
+
+        document.getElementById("auditUndo").addEventListener("click", function () {
+            var a = audits[auditRoute];
+            if (!a || a.scans.length === 0) { return; }
+            var last = a.scans.pop();
+            a.seen[last.tid]--;
+            if (a.seen[last.tid] <= 0) { delete a.seen[last.tid]; }
+            renderAudit();
+            auditInput.focus();
+        });
+
+        document.getElementById("auditReset").addEventListener("click", function () {
+            var r = auditRoute;
+            auditModal.classList.remove("active");
+            kdConfirm("Reiniciar auditoria", "Borrar todos los escaneos de " + r + " y empezar de cero?", function () {
+                audits[r] = { scans: [], seen: {}, start: nowHMS() };
+                openAudit(r);
+            }, "Si, reiniciar");
+        });
+
+        document.getElementById("auditCopyMiss").addEventListener("click", function () {
+            var s = auditSummary(auditRoute);
+            if (s.missing.length === 0) { setStatus("No hay faltantes en " + auditRoute); return; }
+            copyText(s.missing.join("\n"), function (ok) {
+                setStatus(ok ? s.missing.length + " faltantes de " + auditRoute + " copiados" : "No se pudo copiar, usa Exportar auditoria");
+            });
+        });
+
+        document.getElementById("auditCopyExtra").addEventListener("click", function () {
+            var s = auditSummary(auditRoute);
+            if (s.extras.length === 0) { setStatus("No hay sobrantes en " + auditRoute); return; }
+            copyText(s.extras.map(function (x) { return x.tid; }).join("\n"), function (ok) {
+                setStatus(ok ? s.extras.length + " sobrantes de " + auditRoute + " copiados (solo Tracking ID)" : "No se pudo copiar, usa Exportar auditoria");
+            });
+        });
+
+        document.getElementById("auditClose").addEventListener("click", function () { auditModal.classList.remove("active"); });
+
+        function exportAudit() {
+            var r = auditRoute;
+            var a = audits[r];
+            var s = auditSummary(r);
+            var now = new Date();
+            var fecha = pad2(now.getDate()) + "/" + pad2(now.getMonth() + 1) + "/" + now.getFullYear();
+            var F = "font-family:Calibri,Arial,sans-serif;font-size:10pt;border:1px solid #9AA5B1;";
+            var H = "background:#37475A;color:#FFFFFF;font-weight:bold;text-align:center;" + F;
+            var x = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">';
+            x += '<head><meta charset="UTF-8"><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>';
+            x += '<x:Name>Auditoria_' + escapeHtml(r) + '</x:Name><x:WorksheetOptions><x:DoNotDisplayGridlines/></x:WorksheetOptions>';
+            x += '</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table cellspacing="0" cellpadding="3">';
+            x += '<tr><td colspan="5" style="background:#232F3E;color:#FFFFFF;font-weight:bold;font-size:14pt;text-align:center;font-family:Calibri,Arial,sans-serif;">KOMANDER - Auditoria de Ruta ' + escapeHtml(r) + '</td></tr>';
+            x += '<tr><td colspan="5" style="background:#37475A;color:#FFFFFF;text-align:center;font-family:Calibri,Arial,sans-serif;">Estacion: DSL1 | Fecha: ' + fecha + ' | Inicio: ' + a.start + ' | Fin: ' + nowHMS() + '</td></tr>';
+            x += '<tr><td colspan="5" style="font-weight:bold;color:#232F3E;font-family:Calibri,Arial,sans-serif;">En plan: ' + s.expected + ' | Escaneados: ' + s.scans + ' | Correctos: ' + s.ok + ' | Faltantes: ' + s.missing.length + ' | Sobrantes: ' + (s.otra + s.fuera) + ' | Duplicados: ' + s.dup + '</td></tr>';
+            x += '<tr><td></td></tr>';
+            x += '<tr><td style="' + H + '">#</td><td style="' + H + '">Tracking ID</td><td style="' + H + '">Estado</td><td style="' + H + '">Detalle</td><td style="' + H + '">Hora</td></tr>';
+            var colors = { OK: "#FFFFFF", DUP: "#FFF3CD", OTRA: "#F8D7DA", FUERA: "#F5B7B1" };
+            a.scans.forEach(function (sc, i) {
+                var info = auditStatusText(sc);
+                var bg = "background:" + colors[sc.st] + ";color:#232F3E;";
+                x += '<tr><td style="' + bg + F + '">' + (i + 1) + '</td><td style="' + bg + F + '">' + escapeHtml(sc.tid) + '</td><td style="' + bg + F + 'font-weight:bold;">' + info[0] + '</td><td style="' + bg + F + '">' + escapeHtml(info[2]) + '</td><td style="' + bg + F + '">' + sc.t + '</td></tr>';
+            });
+            x += '<tr><td></td></tr>';
+            x += '<tr><td colspan="5" style="background:#E74C3C;color:#FFFFFF;font-weight:bold;' + F + '">FALTANTES (' + s.missing.length + ') - en plan de ' + escapeHtml(r) + ' y no escaneados</td></tr>';
+            s.missing.forEach(function (t, i) {
+                x += '<tr><td style="' + F + '">' + (i + 1) + '</td><td style="' + F + '">' + escapeHtml(t) + '</td><td style="' + F + 'font-weight:bold;color:#C0392B;">FALTANTE</td><td style="' + F + '"></td><td style="' + F + '"></td></tr>';
+            });
+            x += '<tr><td></td></tr><tr><td colspan="5" style="color:#7F8C8D;font-style:italic;font-size:9pt;text-align:center;font-family:Calibri,Arial,sans-serif;">Generado por ' + APP_VERSION + ' | Daniel Diaz Paez | DSL1</td></tr>';
+            x += '</table></body></html>';
+            var blob = new Blob(["\ufeff" + x], { type: "application/vnd.ms-excel;charset=utf-8;" });
+            var url = URL.createObjectURL(blob);
+            var el = document.createElement("a");
+            el.href = url;
+            el.download = "Komander_Auditoria_" + r + "_" + now.getFullYear() + pad2(now.getMonth() + 1) + pad2(now.getDate()) + "_" + pad2(now.getHours()) + pad2(now.getMinutes()) + ".xls";
+            document.body.appendChild(el);
+            el.click();
+            document.body.removeChild(el);
+            setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+            var hist = storageGet(HIST_KEY) || [];
+            hist.push({
+                fecha: fecha, hora: pad2(now.getHours()) + ":" + pad2(now.getMinutes()),
+                tipo: "Auditoria " + r + " (OK " + s.ok + "/" + s.expected + ", F:" + s.missing.length + ", S:" + (s.otra + s.fuera) + ", D:" + s.dup + ")",
+                archivos: state.files.length, nombres: state.files.map(function (f) { return f.name; }).join(", "),
+                rutas: 1, rutasExp: "", pkgs: s.expected, pkgsExp: "", bloques: "", estrategia: "", modoExp: "",
+                objetivo: "", varianza: "", varPct: "", ok: ""
+            });
+            if (hist.length > HIST_MAX) { hist = hist.slice(hist.length - HIST_MAX); }
+            storageSet(HIST_KEY, hist);
+            setStatus("Auditoria de " + r + " exportada y registrada en Historial");
+        }
+        document.getElementById("auditExport").addEventListener("click", exportAudit);
+
+        /* ===================== MOVER RUTAS ===================== */
+
+        var pendingMove = { route: null, srcBlock: -1 };
+
+        function openMoveDialog(routeName, srcIdx) {
+            pendingMove.route = routeName;
+            pendingMove.srcBlock = srcIdx;
+            dom.moveModalTitle.textContent = "Mover " + routeName + " (" + findRoute(srcIdx, routeName).packages + " pqts) a:";
+            var opts = "";
+            state.blocks.forEach(function (block, i) {
+                if (i !== srcIdx) {
+                    opts += '<option value="' + i + '">Bloque ' + (i + 1) + ' (' + block.total + ' pkgs, ' + block.routes.length + ' rutas)</option>';
+                }
+            });
+            dom.moveModalSelect.innerHTML = opts;
+            dom.moveModal.classList.add("active");
+        }
+
+        dom.moveModalOk.addEventListener("click", function () {
+            var tgt = parseInt(dom.moveModalSelect.value, 10);
+            dom.moveModal.classList.remove("active");
+            if (!isNaN(tgt)) { executeMove(pendingMove.route, pendingMove.srcBlock, tgt, true); }
+        });
+        dom.moveModalCancel.addEventListener("click", function () { dom.moveModal.classList.remove("active"); });
+
+        function moveRoute(routeName, srcIdx, tgtIdx) {
+            var src = state.blocks[srcIdx];
+            var tgt = state.blocks[tgtIdx];
+            var pos = -1;
+            src.routes.forEach(function (r, i) { if (r.name === routeName) { pos = i; } });
+            if (pos < 0) { return false; }
+            var route = src.routes.splice(pos, 1)[0];
+            src.total -= route.packages;
+            tgt.routes.push(route);
+            tgt.total += route.packages;
+            tgt.routes.sort(function (a, b) { return compareRoutes(a.name, b.name); });
+            return true;
+        }
+
+        function executeMove(routeName, srcIdx, tgtIdx, record) {
+            var mr = parseInt(dom.maxRoutes.value, 10) || 7;
+            if (state.blocks[tgtIdx].routes.length >= mr) {
+                kdAlert("Bloque lleno", "Bloque " + (tgtIdx + 1) + " ya tiene " + mr + " rutas (Max Rutas).\nMueve otra ruta fuera primero o sube Max Rutas.");
+                return;
+            }
+            if (!moveRoute(routeName, srcIdx, tgtIdx)) { return; }
+            if (record) {
+                state.undoStack.push({ route: routeName, src: srcIdx, tgt: tgtIdx });
                 state.redoStack = [];
+            }
+            state.selectedRoute = null;
+            state.selectedBlockIdx = -1;
+            renderBlocks();
+            updateMetrics();
+            setStatus(routeName + " movida a Bloque " + (tgtIdx + 1));
+        }
+
+        function doUndo() {
+            var a = state.undoStack.pop();
+            if (!a) { setStatus("Nada que deshacer"); return; }
+            if (moveRoute(a.route, a.tgt, a.src)) {
+                state.redoStack.push(a);
                 renderBlocks();
                 updateMetrics();
+                setStatus("Deshecho: " + a.route + " volvio a Bloque " + (a.src + 1));
             }
-            function updateMetrics() {
-                if (state.blocks.length === 0) return;
-                var totalPkgs = 0;
-                var totalRoutes = 0;
-                var blockTotals = [];
-                var allRoutes = [];
-                state.blocks.forEach(function(block) { totalPkgs += block.total; totalRoutes += block.routes.length; blockTotals.push(block.total); block.routes.forEach(function(r) { allRoutes.push(r); }); });
-                var obj = state.objetivoPkgs;
-                var avg = Math.round(obj);
-                var maxB = Math.max.apply(null, blockTotals);
-                var minB = Math.min.apply(null, blockTotals);
-                var variance = maxB - minB;
-                var varPct = obj > 0 ? (variance / obj * 100).toFixed(1) : "0";
-                var maxRoute = { name: "---", packages: 0 };
-                var minRoute = { name: "---", packages: Infinity };
-                allRoutes.forEach(function(r) { if (r.packages > maxRoute.packages) maxRoute = r; if (r.packages < minRoute.packages) minRoute = r; });
-                if (minRoute.packages === Infinity) minRoute = { name: "---", packages: 0 };
-                var okCount = 0;
-                blockTotals.forEach(function(t) { if (Math.abs(t - obj) <= (obj * UMBRAL_SEMAFORO)) okCount++; });
-                dom.metricTotal.textContent = totalPkgs.toLocaleString();
-                dom.metricAvg.textContent = avg.toLocaleString();
-                dom.metricVariance.textContent = variance.toLocaleString();
-                dom.metricVarianceDetail.textContent = maxB + " - " + minB;
-                dom.metricMax.textContent = maxRoute.packages.toLocaleString();
-                dom.metricMaxDetail.textContent = maxRoute.name;
-                dom.metricMin.textContent = minRoute.packages.toLocaleString();
-                dom.metricMinDetail.textContent = minRoute.name;
-                dom.metricBlocks.textContent = state.blocks.length;
-                dom.metricRoutes.textContent = totalRoutes;
-                dom.metricOK.textContent = okCount + "/" + state.blocks.length;
-                dom.metricVarPct.textContent = varPct + "%";
+        }
+
+        function doRedo() {
+            var a = state.redoStack.pop();
+            if (!a) { setStatus("Nada que rehacer"); return; }
+            if (moveRoute(a.route, a.src, a.tgt)) {
+                state.undoStack.push(a);
+                renderBlocks();
+                updateMetrics();
+                setStatus("Rehecho: " + a.route + " a Bloque " + (a.tgt + 1));
             }
-            function renderBlocks() {
-                dom.blocksGrid.innerHTML = "";
-                if (state.blocks.length === 0) {
-                    dom.blocksGrid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="empty-icon">[ ]</div><div class="empty-title">Carga un archivo CSV para comenzar</div><div class="empty-sub">Komander balanceara automaticamente tus rutas en bloques</div></div>';
-                    return;
-                }
-                var obj = state.objetivoPkgs;
-                var objRound = Math.round(obj);
-                state.blocks.forEach(function(block, idx) {
-                    var col = document.createElement("div");
-                    col.className = "block-column";
-                    col.style.animationDelay = (idx * 0.04) + "s";
-                    var accent = BLOCK_COLORS[idx % BLOCK_COLORS.length];
-                    var dentro = Math.abs(block.total - obj) <= (obj * UMBRAL_SEMAFORO);
-                    var badgeCss = dentro ? "badge-ok" : "badge-fail";
-                    var badgeTxt = dentro ? "OK" : "X";
-                    var ratio = obj > 0 ? block.total / obj : 0;
-                    var barColor;
-                    if (ratio <= 0.8) { barColor = "#3498DB"; }
-                    else if (ratio <= 1.2) { barColor = "#2ECC71"; }
-                    else { barColor = "#E74C3C"; }
-                    var barWidth = Math.min(ratio * 100, 100);
-                    var dev = block.total - objRound;
-                    var devTxt, devColor;
-                    if (dev > 0) { devTxt = "+" + dev; devColor = "#E74C3C"; }
-                    else if (dev < 0) { devTxt = String(dev); devColor = "#3498DB"; }
-                    else { devTxt = "0"; devColor = "#2ECC71"; }
-                    var html = "";
-                    html += '<div class="block-header"><div class="block-header-left">';
-                    html += '<div class="block-accent-bar" style="background:' + accent + ';"></div>';
-                    html += '<span class="block-title">B' + (block.id + 1) + ': ' + block.total + '</span>';
-                    html += '<span class="block-stats">/' + objRound + '</span></div>';
-                    html += '<span class="block-badge ' + badgeCss + '">' + badgeTxt + '</span></div>';
-                    html += '<div class="block-progress-wrap"><div class="progress-bar">';
-                    html += '<div class="progress-fill" style="width:' + barWidth.toFixed(1) + '%;background:' + barColor + ';"></div>';
-                    html += '</div></div>';
-                    html += '<div class="block-sep" style="background:' + accent + ';"></div>';
-                    var assocVal = state.associates["B" + (block.id + 1)] || "";
-                    html += '<div class="block-associate"><input type="text" class="associate-input" placeholder="Asociado / Alias..." data-block="B' + (block.id + 1) + '" value="' + assocVal + '"></div>';
-                    html += '<div class="route-list">';
-                    block.routes.forEach(function(route) {
-                        var isSelected = (state.selectedRoute === route.name && state.selectedBlockIdx === idx);
-                        var selClass = isSelected ? " route-selected" : "";
-                        html += '<div class="route-card' + selClass + '" data-route="' + route.name + '" data-block="' + idx + '">';
-                        html += '<span class="route-name">' + route.name + '</span>';
-                        html += '<span class="route-pkgs">(' + route.packages + ')</span>';
-                        html += '<button class="route-btn" data-route="' + route.name + '" data-block="' + idx + '" title="Mover ruta">+</button></div>';
-                    });
-                    html += '</div>';
-                    html += '<div class="block-footer"><span class="block-footer-text" style="color:' + devColor + ';">R:' + block.routes.length + ' | ' + devTxt + '</span></div>';
-                    col.innerHTML = html;
-                    dom.blocksGrid.appendChild(col);
-                });
-                bindBlockEvents();
-            }
-            function bindBlockEvents() {
-                document.querySelectorAll(".associate-input").forEach(function(inp) {
-                    inp.addEventListener("input", function() { state.associates[this.getAttribute("data-block")] = this.value; });
-                });
-                document.querySelectorAll(".route-card").forEach(function(card) {
-                    card.addEventListener("click", function(e) {
-                        if (e.target.classList.contains("route-btn")) return;
-                        var rName = this.getAttribute("data-route");
-                        var bIdx = parseInt(this.getAttribute("data-block"), 10);
-                        if (state.selectedRoute === rName && state.selectedBlockIdx === bIdx) {
-                            state.selectedRoute = null;
-                            state.selectedBlockIdx = -1;
-                            setStatus("Deseleccionada | Tecla 1-" + state.blocks.length + " para mover");
-                        } else {
-                            state.selectedRoute = rName;
-                            state.selectedBlockIdx = bIdx;
-                            var pkg = 0;
-                            state.blocks[bIdx].routes.forEach(function(r) { if (r.name === rName) pkg = r.packages; });
-                            setStatus(rName + " (" + pkg + " pqts) seleccionada | Tecla 1-" + state.blocks.length + " para mover");
-                        }
-                        renderBlocks();
-                    });
-                });
-                document.querySelectorAll(".route-btn").forEach(function(btn) {
-                    btn.addEventListener("click", function() {
-                        var rName = this.getAttribute("data-route");
-                        var bIdx = parseInt(this.getAttribute("data-block"), 10);
-                        openMoveDialog(rName, bIdx);
-                    });
-                });
-            }
-            var pendingMove = { route: null, srcBlock: -1 };
-            function openMoveDialog(routeName, srcBlockIdx) {
-                pendingMove.route = routeName;
-                pendingMove.srcBlock = srcBlockIdx;
-                var pkg = 0;
-                state.blocks[srcBlockIdx].routes.forEach(function(r) { if (r.name === routeName) pkg = r.packages; });
-                dom.moveModalTitle.textContent = "Mover " + routeName + " (" + pkg + " pqts) a:";
-                dom.moveModalSelect.innerHTML = "";
-                state.blocks.forEach(function(block, i) {
-                    if (i !== srcBlockIdx) {
-                        var opt = document.createElement("option");
-                        opt.value = String(i);
-                        opt.textContent = "Bloque " + (i + 1) + " (" + block.total + " pkgs, " + block.routes.length + " rutas)";
-                        dom.moveModalSelect.appendChild(opt);
-                    }
-                });
-                dom.moveModal.classList.add("active");
-            }
-            dom.moveModalOk.addEventListener("click", function() {
-                var tgtIdx = parseInt(dom.moveModalSelect.value, 10);
+        }
+
+        document.addEventListener("keydown", function (e) {
+            var tag = (e.target.tagName || "").toUpperCase();
+            if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") { return; }
+            if (e.ctrlKey && (e.key === "z" || e.key === "Z")) { e.preventDefault(); doUndo(); return; }
+            if (e.ctrlKey && (e.key === "y" || e.key === "Y")) { e.preventDefault(); doRedo(); return; }
+            if (e.key === "Escape") {
                 dom.moveModal.classList.remove("active");
-                executeMove(pendingMove.route, pendingMove.srcBlock, tgtIdx);
-            });
-            dom.moveModalCancel.addEventListener("click", function() { dom.moveModal.classList.remove("active"); });
-            function executeMove(routeName, srcIdx, tgtIdx) {
-                var mr = parseInt(dom.maxRoutes.value, 10) || 7;
-                if (state.blocks[tgtIdx].routes.length >= mr) { setStatus("Bloque " + (tgtIdx + 1) + " lleno (max " + mr + ")"); return; }
-                var srcBlock = state.blocks[srcIdx];
-                var tgtBlock = state.blocks[tgtIdx];
-                var routeObj = null;
-                var routeIdx = -1;
-                srcBlock.routes.forEach(function(r, i) { if (r.name === routeName) { routeObj = r; routeIdx = i; } });
-                if (!routeObj || routeIdx < 0) return;
-                state.undoStack.push({ route: routeName, src: srcIdx, tgt: tgtIdx, packages: routeObj.packages, tids: routeObj.tids });
-                state.redoStack = [];
-                srcBlock.routes.splice(routeIdx, 1);
-                srcBlock.total -= routeObj.packages;
-                tgtBlock.routes.push(routeObj);
-                tgtBlock.total += routeObj.packages;
-                tgtBlock.routes.sort(function(a, b) { return compareRoutes(a.name, b.name); });
-                state.selectedRoute = null;
-                state.selectedBlockIdx = -1;
-                renderBlocks();
-                updateMetrics();
-                setStatus(routeName + " movida a Bloque " + (tgtIdx + 1));
+                dom.compareModal.classList.remove("active");
+                dom.historyModal.classList.remove("active");
+                if (kdOpen) { kdClose(); }
+                closeRouteMenu();
+                copyModal.classList.remove("active");
+                return;
             }
+            if (state.selectedRoute === null) { return; }
+            var num = parseInt(e.key, 10);
+            if (isNaN(num) || num < 1 || num > state.blocks.length) { return; }
+            if (num - 1 === state.selectedBlockIdx) { setStatus(state.selectedRoute + " ya esta en Bloque " + num); return; }
+            executeMove(state.selectedRoute, state.selectedBlockIdx, num - 1, true);
+        });
 
-            function doUndo() {
-                if (state.undoStack.length === 0) { setStatus("Nada que deshacer"); return; }
-                var action = state.undoStack.pop();
-                state.redoStack.push(action);
-                var tgtBlock = state.blocks[action.tgt];
-                var srcBlock = state.blocks[action.src];
-                var cardFound = null;
-                var cardIdx = -1;
-                tgtBlock.routes.forEach(function(r, i) { if (r.name === action.route) { cardFound = r; cardIdx = i; } });
-                if (!cardFound || cardIdx < 0) { setStatus("Error al deshacer"); return; }
-                tgtBlock.routes.splice(cardIdx, 1);
-                tgtBlock.total -= cardFound.packages;
-                srcBlock.routes.push(cardFound);
-                srcBlock.total += cardFound.packages;
-                srcBlock.routes.sort(function(a, b) { return compareRoutes(a.name, b.name); });
-                state.selectedRoute = null;
-                state.selectedBlockIdx = -1;
-                renderBlocks();
-                updateMetrics();
-                setStatus("Deshecho: " + action.route + " volvio a Bloque " + (action.src + 1));
-            }
-            function doRedo() {
-                if (state.redoStack.length === 0) { setStatus("Nada que rehacer"); return; }
-                var action = state.redoStack.pop();
-                state.undoStack.push(action);
-                var srcBlock = state.blocks[action.src];
-                var tgtBlock = state.blocks[action.tgt];
-                var cardFound = null;
-                var cardIdx = -1;
-                srcBlock.routes.forEach(function(r, i) { if (r.name === action.route) { cardFound = r; cardIdx = i; } });
-                if (!cardFound || cardIdx < 0) { setStatus("Error al rehacer"); return; }
-                srcBlock.routes.splice(cardIdx, 1);
-                srcBlock.total -= cardFound.packages;
-                tgtBlock.routes.push(cardFound);
-                tgtBlock.total += cardFound.packages;
-                tgtBlock.routes.sort(function(a, b) { return compareRoutes(a.name, b.name); });
-                state.selectedRoute = null;
-                state.selectedBlockIdx = -1;
-                renderBlocks();
-                updateMetrics();
-                setStatus("Rehecho: " + action.route + " a Bloque " + (action.tgt + 1));
-            }
-            document.addEventListener("keydown", function(e) {
-                var tag = (e.target.tagName || "").toUpperCase();
-                if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
-                if (e.ctrlKey && (e.key === "z" || e.key === "Z")) { e.preventDefault(); doUndo(); return; }
-                if (e.ctrlKey && (e.key === "y" || e.key === "Y")) { e.preventDefault(); doRedo(); return; }
-                if (state.selectedRoute === null) return;
-                var num = parseInt(e.key, 10);
-                if (isNaN(num) || num < 1 || num > state.blocks.length) return;
-                var tgtIdx = num - 1;
-                var srcIdx = state.selectedBlockIdx;
-                if (srcIdx === tgtIdx) { setStatus(state.selectedRoute + " ya esta en Bloque " + num); return; }
-                executeMove(state.selectedRoute, srcIdx, tgtIdx);
+        /* ===================== COMPARAR ===================== */
+
+        function showCompare() {
+            if (!state.allResults) { kdAlert("Sin balanceo", "Genera el balanceo primero."); return; }
+            var objRound = Math.round(state.objetivoPkgs);
+            var bestIdx = bestStrategyIdx();
+            var h = '<div style="text-align:center;font-size:0.8rem;color:#BDC3C7;">Objetivo/bloque: ' + objRound + ' pqts | Umbral OK: +-20% | Expansiones: ' + escapeHtml(expLabel()) + '</div>';
+            h += '<table class="compare-table"><tr><th>Estrategia</th><th>Bloque Max</th><th>Bloque Min</th><th>Diferencia</th><th>Varianza %</th><th>Bloques OK</th><th>Recomendada</th></tr>';
+            state.allResults.forEach(function (r, i) {
+                h += '<tr' + (i === bestIdx ? ' class="rec-row"' : '') + '>';
+                h += '<td style="text-align:left;font-weight:600;">' + r.name + '</td>';
+                h += '<td>' + r.max + '</td><td>' + r.min + '</td><td>' + r.dif + '</td>';
+                h += '<td style="color:#FF9900;font-weight:700;">' + (r.varPct * 100).toFixed(1) + '%</td>';
+                h += '<td>' + r.ok + '/' + r.totalB + '</td><td>' + (i === bestIdx ? 'MEJOR' : '-') + '</td></tr>';
             });
-            function showCompare() {
-                if (!state.allResults) { alert("Genera el balanceo primero."); return; }
-                var obj = state.objetivoPkgs;
-                var objRound = Math.round(obj);
-                var html = "";
-                html += '<table class="compare-table"><tr>';
-                html += '<th>Estrategia</th><th>Bloque Max</th><th>Bloque Min</th>';
-                html += '<th>Diferencia</th><th>Varianza %</th><th>Bloques OK</th><th>Recomendada</th></tr>';
-                var bestIdx = 0;
-                var bestVar = 999;
-                state.allResults.forEach(function(r, i) { if (r.varPct < bestVar) { bestVar = r.varPct; bestIdx = i; } });
-                state.allResults.forEach(function(r, i) {
-                    var isBest = (i === bestIdx);
-                    var rowClass = isBest ? ' class="rec-row"' : '';
-                    var varStr = (r.varPct * 100).toFixed(1) + "%";
-                    html += '<tr' + rowClass + '>';
-                    html += '<td style="text-align:left;font-weight:600;">' + r.name + '</td>';
-                    html += '<td>' + r.max + '</td><td>' + r.min + '</td><td>' + r.dif + '</td>';
-                    html += '<td style="color:#FF9900;font-weight:700;">' + varStr + '</td>';
-                    html += '<td>' + r.ok + '/' + r.totalB + '</td>';
-                    html += '<td>' + (isBest ? 'MEJOR' : '-') + '</td></tr>';
-                });
-                html += '</table>';
-                html += '<div style="margin-top:16px;font-size:0.78rem;color:#BDC3C7;"><strong style="color:#FF9900;">Detalle por bloque:</strong></div>';
-                state.allResults.forEach(function(r, i) {
-                    var isBest = (i === bestIdx);
-                    var prefix = isBest ? '>> ' : '';
-                    var nameStyle = isBest ? 'color:#FF9900;font-weight:700;' : 'color:#ECF0F1;';
-                    html += '<div style="margin-top:8px;font-size:0.72rem;">';
-                    html += '<span style="' + nameStyle + '">' + prefix + r.name + ':</span> ';
-                    var parts = [];
-                    for (var b = 0; b < r.totalB; b++) {
-                        var dv = r.bpkgs[b] - objRound;
-                        var dvStr = dv >= 0 ? "+" + dv : String(dv);
-                        var dvClr = dv > 0 ? "#E74C3C" : (dv < 0 ? "#3498DB" : "#2ECC71");
-                        parts.push('B' + (b + 1) + ':' + r.bpkgs[b] + '(<span style="color:' + dvClr + ';">' + dvStr + '</span>)');
-                    }
-                    html += parts.join(' | ') + '</div>';
-                });
-                dom.compareBody.innerHTML = html;
-                dom.compareModal.classList.add("active");
-            }
-            function exportSummary() {
-                if (state.blocks.length === 0) { alert("No hay balanceo para exportar."); return; }
-                var obj = state.objetivoPkgs;
-                var objRound = Math.round(obj);
-                var now = new Date();
-                var fechaStr = String(now.getDate()).padStart(2, "0") + "/" + String(now.getMonth() + 1).padStart(2, "0") + "/" + now.getFullYear();
-                var horaStr = String(now.getHours()).padStart(2, "0") + ":" + String(now.getMinutes()).padStart(2, "0");
-                var totalPkgs = 0;
-                var totalRoutes = 0;
-                state.blocks.forEach(function(b) { totalPkgs += b.total; totalRoutes += b.routes.length; });
-                var sNavy = "background-color:#232F3E;color:#FFFFFF;font-weight:bold;";
-                var sNavyOrange = "background-color:#232F3E;color:#FF9900;font-weight:bold;";
-                var sOrange = "background-color:#FF9900;color:#232F3E;font-weight:bold;";
-                var sOrangeSoft = "background-color:#FFF3E0;color:#232F3E;font-weight:bold;";
-                var sWhite = "background-color:#FFFFFF;color:#232F3E;";
-                var sGray = "background-color:#F5F5F5;color:#232F3E;";
-                var sGrayItalic = "background-color:#F0F0F0;color:#666666;font-style:italic;";
-                var sCenter = "text-align:center;";
-                var sBorder = "border:1px solid #D5D8DC;";
-                var sBorderNavy = "border:1px solid #1A252F;";
-                var sFont = "font-family:Calibri,Arial,sans-serif;font-size:11pt;";
-                var sFontSm = "font-family:Calibri,Arial,sans-serif;font-size:10pt;";
-                var sFontTitle = "font-family:Calibri,Arial,sans-serif;font-size:14pt;";
-                var sFontSub = "font-family:Calibri,Arial,sans-serif;font-size:11pt;";
-                var sPad = "padding:4px 8px;";
-                var BLOCKS_PER_ROW = 5;
-                var totalColsPerRow = BLOCKS_PER_ROW * 2 + (BLOCKS_PER_ROW - 1);
-                var xl = "";
-                xl += '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">';
-                xl += '<head><meta charset="UTF-8">';
-                xl += '<!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>';
-                xl += '<x:Name>Resumen</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions>';
-                xl += '</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->';
-                xl += '</head><body><table border="0" cellpadding="0" cellspacing="0">';
-                xl += '<tr><td colspan="' + totalColsPerRow + '" style="' + sNavy + sFontTitle + sCenter + sPad + sBorderNavy + 'padding:10px 8px;">KOMANDER - Resumen del Dia</td></tr>';
-                xl += '<tr><td colspan="' + totalColsPerRow + '" style="' + sNavyOrange + sFontSub + sCenter + sPad + sBorderNavy + '">Estacion: DSL1 | Fecha: ' + fechaStr + ' | Hora: ' + horaStr + ' | Estrategia: ' + STRATEGY_NAMES[state.currentStrategyIdx] + '</td></tr>';
-                xl += '<tr><td colspan="' + totalColsPerRow + '" style="' + sNavy + sFontSm + sCenter + sPad + sBorderNavy + '">Total Rutas: ' + totalRoutes + ' | Total Paquetes: ' + totalPkgs + ' | Objetivo/Bloque: ' + objRound + '</td></tr>';
-                xl += '<tr><td colspan="' + totalColsPerRow + '" style="height:10px;"></td></tr>';
-                var numGroups = Math.ceil(state.blocks.length / BLOCKS_PER_ROW);
-                for (var g = 0; g < numGroups; g++) {
-                    var startIdx = g * BLOCKS_PER_ROW;
-                    var endIdx = Math.min(startIdx + BLOCKS_PER_ROW, state.blocks.length);
-                    var blocksInGroup = endIdx - startIdx;
-                    var remaining = BLOCKS_PER_ROW - blocksInGroup;
-                    var maxRoutesInGroup = 0;
-                    for (var bi = startIdx; bi < endIdx; bi++) {
-                        if (state.blocks[bi].routes.length > maxRoutesInGroup) maxRoutesInGroup = state.blocks[bi].routes.length;
-                    }
-                    xl += '<tr>';
-                    for (var bi = startIdx; bi < endIdx; bi++) {
-                        var assocName = state.associates["B" + (state.blocks[bi].id + 1)] || "(Sin asociado)";
-                        if (bi > startIdx) xl += '<td style="width:8px;"></td>';
-                        xl += '<td colspan="2" style="' + sOrangeSoft + sFontSm + sCenter + sPad + sBorder + '">' + assocName + '</td>';
-                    }
-                    for (var fi = 0; fi < remaining; fi++) { xl += '<td style="width:8px;"></td><td colspan="2"></td>'; }
-                    xl += '</tr>';
-                    xl += '<tr>';
-                    for (var bi = startIdx; bi < endIdx; bi++) {
-                        var block = state.blocks[bi];
-                        var dentro = Math.abs(block.total - obj) <= (obj * UMBRAL_SEMAFORO);
-                        var statusTxt = dentro ? "OK" : "ALERTA";
-                        var dev = block.total - objRound;
-                        var devStr = dev >= 0 ? "+" + dev : String(dev);
-                        if (bi > startIdx) xl += '<td style="width:8px;"></td>';
-                        xl += '<td colspan="2" style="' + sNavyOrange + sFont + sCenter + sPad + sBorderNavy + '">BLOQUE ' + (block.id + 1) + ' (' + block.total + ') [' + statusTxt + '] ' + devStr + '</td>';
-                    }
-                    for (var fi = 0; fi < remaining; fi++) { xl += '<td style="width:8px;"></td><td colspan="2"></td>'; }
-                    xl += '</tr>';
-                    xl += '<tr>';
-                    for (var bi = startIdx; bi < endIdx; bi++) {
-                        if (bi > startIdx) xl += '<td style="width:8px;"></td>';
-                        xl += '<td style="' + sNavy + sFontSm + sCenter + sPad + sBorderNavy + 'width:80px;">RUTA</td>';
-                        xl += '<td style="' + sNavy + sFontSm + sCenter + sPad + sBorderNavy + 'width:60px;">PQTS</td>';
-                    }
-                    for (var fi = 0; fi < remaining; fi++) { xl += '<td style="width:8px;"></td><td style="width:80px;"></td><td style="width:60px;"></td>'; }
-                    xl += '</tr>';
-                    for (var ri = 0; ri < maxRoutesInGroup; ri++) {
-                        var rowStyle = (ri % 2 === 0) ? sWhite : sGray;
-                        xl += '<tr>';
-                        for (var bi = startIdx; bi < endIdx; bi++) {
-                            var block = state.blocks[bi];
-                            if (bi > startIdx) xl += '<td></td>';
-                            if (ri < block.routes.length) {
-                                var route = block.routes[ri];
-                                xl += '<td style="' + rowStyle + sFontSm + sCenter + sPad + sBorder + '">' + route.name + '</td>';
-                                xl += '<td style="' + rowStyle + sFontSm + sCenter + sPad + sBorder + '">' + route.packages + '</td>';
-                            } else {
-                                xl += '<td style="' + rowStyle + sBorder + '"></td><td style="' + rowStyle + sBorder + '"></td>';
-                            }
-                        }
-                        for (var fi = 0; fi < remaining; fi++) { xl += '<td></td><td></td><td></td>'; }
-                        xl += '</tr>';
-                    }
-                    xl += '<tr>';
-                    for (var bi = startIdx; bi < endIdx; bi++) {
-                        var block = state.blocks[bi];
-                        if (bi > startIdx) xl += '<td></td>';
-                        xl += '<td style="' + sOrange + sFontSm + sCenter + sPad + sBorder + '">T.RUTAS: ' + block.routes.length + '</td>';
-                        xl += '<td style="' + sOrange + sFontSm + sCenter + sPad + sBorder + '">T.PQTS: ' + block.total + '</td>';
-                    }
-                    for (var fi = 0; fi < remaining; fi++) { xl += '<td></td><td></td><td></td>'; }
-                    xl += '</tr>';
-                    if (g < numGroups - 1) xl += '<tr><td colspan="' + totalColsPerRow + '" style="height:16px;"></td></tr>';
+            h += '</table>';
+            h += '<div style="margin-top:16px;font-size:0.78rem;color:#FF9900;font-weight:700;">Detalle por bloque:</div>';
+            state.allResults.forEach(function (r, i) {
+                var parts = [];
+                for (var b = 0; b < r.totalB; b++) {
+                    var dv = r.bpkgs[b] - objRound;
+                    var clr = dv > 0 ? COLOR_RED : (dv < 0 ? COLOR_BLUE : COLOR_GREEN);
+                    parts.push("B" + (b + 1) + ":" + r.bpkgs[b] + '(<span style="color:' + clr + ';">' + (dv > 0 ? "+" + dv : dv) + '</span>)');
                 }
-                xl += '<tr><td colspan="' + totalColsPerRow + '" style="height:10px;"></td></tr>';
-                xl += '<tr><td colspan="' + totalColsPerRow + '" style="' + sGrayItalic + sFontSm + sCenter + sPad + sBorder + '">Generado por Komander Dispatch Web v1.0 | Balanceo por: diazpaez | ' + fechaStr + ' ' + horaStr + '</td></tr>';
-                xl += '</table></body></html>';
-                var blob = new Blob(["\ufeff" + xl], { type: "application/vnd.ms-excel;charset=utf-8;" });
-                var url = URL.createObjectURL(blob);
-                var a = document.createElement("a");
-                var fileTs = now.getFullYear() + String(now.getMonth() + 1).padStart(2, "0") + String(now.getDate()).padStart(2, "0") + "_" + String(now.getHours()).padStart(2, "0") + String(now.getMinutes()).padStart(2, "0");
-                a.href = url;
-                a.download = "Komander_Resumen_" + fileTs + ".xls";
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                setStatus("Resumen exportado: Komander_Resumen_" + fileTs + ".xls");
-            }
-            dom.compareClose.addEventListener("click", function() { dom.compareModal.classList.remove("active"); });
-            dom.moveModal.addEventListener("click", function(e) { if (e.target === dom.moveModal) dom.moveModal.classList.remove("active"); });
-            dom.compareModal.addEventListener("click", function(e) { if (e.target === dom.compareModal) dom.compareModal.classList.remove("active"); });
-            dom.strategy.addEventListener("change", function() {
-                if (!state.allResults) return;
-                var idx = parseInt(this.value, 10) - 1;
-                if (idx < 0 || idx >= state.allResults.length) return;
-                applyStrategy(idx);
-                setStatus("Mostrando: " + STRATEGY_NAMES[idx]);
+                h += '<div style="margin-top:8px;font-size:0.72rem;"><span style="' + (i === bestIdx ? 'color:#FF9900;font-weight:700;' : '') + '">' +
+                    (i === bestIdx ? '&gt;&gt; ' : '') + r.name + ':</span> ' + parts.join(" | ") + '</div>';
             });
-            dom.btnBalance.addEventListener("click", function() { generate(); });
-            dom.btnCompare.addEventListener("click", function() { showCompare(); });
-            dom.btnUndo.addEventListener("click", function() { doUndo(); });
-            dom.btnSummary.addEventListener("click", function() { exportSummary(); });
-            dom.btnCompare.style.opacity = "0.45";
-            dom.btnCompare.style.pointerEvents = "none";
-            dom.btnUndo.style.opacity = "0.45";
-            dom.btnUndo.style.pointerEvents = "none";
-            dom.btnSummary.style.opacity = "0.45";
-            dom.btnSummary.style.pointerEvents = "none";
-            dom.btnBalance.style.opacity = "0.45";
-            dom.btnBalance.style.pointerEvents = "none";
-            setStatus("Listo | Carga un CSV para comenzar");
-        })();
-    </script>
-</body>
-</html>
+            dom.compareBody.innerHTML = h;
+            dom.compareModal.classList.add("active");
+        }
 
+        dom.compareClose.addEventListener("click", function () { dom.compareModal.classList.remove("active"); });
+        dom.moveModal.addEventListener("click", function (e) { if (e.target === dom.moveModal) { dom.moveModal.classList.remove("active"); } });
+        dom.compareModal.addEventListener("click", function (e) { if (e.target === dom.compareModal) { dom.compareModal.classList.remove("active"); } });
+
+        /* ===================== RESUMEN DEL DIA (grid estilo desktop) ===================== */
+
+        function exportSummary() {
+            if (state.blocks.length === 0) { kdAlert("Sin balanceo", "No hay balanceo para exportar."); return; }
+            var obj = state.objetivoPkgs;
+            var objRound = Math.round(obj);
+            var now = new Date();
+            var fechaStr = pad2(now.getDate()) + "/" + pad2(now.getMonth() + 1) + "/" + now.getFullYear();
+            var horaStr = pad2(now.getHours()) + ":" + pad2(now.getMinutes());
+            var totalPkgs = 0;
+            var totalRoutes = 0;
+            state.blocks.forEach(function (b) { totalPkgs += b.total; totalRoutes += b.routes.length; });
+
+            var F = "font-family:Calibri,Arial,sans-serif;";
+            var B = "border:1px solid #9AA5B1;";
+            var sTitle = "background:#232F3E;color:#FFFFFF;font-weight:bold;font-size:16pt;text-align:center;height:34px;" + F;
+            var sSub = "background:#37475A;color:#FFFFFF;font-weight:bold;font-size:11pt;text-align:center;" + F;
+            var sLbl = "color:#232F3E;font-weight:bold;font-size:10pt;" + F;
+            var sVal = "color:#FF9900;font-weight:bold;font-size:11pt;" + F;
+            var sAsoc = "background:#37475A;color:#FFFFFF;font-weight:bold;font-size:10pt;text-align:center;" + B + F;
+            var sBlk = "background:#232F3E;color:#FFFFFF;font-weight:bold;font-size:10pt;text-align:center;" + B + F;
+            var sColH = "background:#37475A;color:#FFFFFF;font-weight:bold;font-size:10pt;text-align:center;" + B + F;
+            var sCellL = "background:#FFFFFF;color:#232F3E;font-size:10pt;text-align:left;" + B + F;
+            var sCellR = "background:#FFFFFF;color:#232F3E;font-size:10pt;text-align:right;" + B + F;
+            var sTotL = "background:#FF9900;color:#232F3E;font-weight:bold;font-size:10pt;text-align:left;" + B + F;
+            var sTotR = "background:#FF9900;color:#232F3E;font-weight:bold;font-size:10pt;text-align:right;" + B + F;
+            var sFoot = "color:#7F8C8D;font-style:italic;font-size:9pt;text-align:center;" + F;
+
+            var PER_ROW = 5;
+            var COLS = PER_ROW * 3 - 1;
+            var fileNames = state.files.map(function (f) { return f.name; }).join(", ");
+
+            var x = "";
+            x += '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">';
+            x += '<head><meta charset="UTF-8"><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>';
+            x += '<x:Name>Resumen_del_Dia</x:Name><x:WorksheetOptions><x:DoNotDisplayGridlines/></x:WorksheetOptions>';
+            x += '</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body>';
+            x += '<table border="0" cellpadding="3" cellspacing="0">';
+            x += '<col width="20">';
+            for (var c = 0; c < PER_ROW; c++) {
+                x += '<col width="105"><col width="65">';
+                if (c < PER_ROW - 1) { x += '<col width="14">'; }
+            }
+
+            x += '<tr><td></td></tr>';
+            x += '<tr><td></td><td colspan="' + COLS + '" style="' + sTitle + '">KOMANDER - Resumen del Dia</td></tr>';
+            x += '<tr><td></td><td colspan="' + COLS + '" style="' + sSub + '">Estacion: DSL1 | Fecha: ' + fechaStr + ' ' + horaStr + '</td></tr>';
+            x += '<tr><td></td></tr>';
+            x += '<tr><td></td><td colspan="2" style="' + sLbl + '">Total Rutas:</td><td style="' + sVal + '">' + totalRoutes + '</td>';
+            x += '<td colspan="2" style="' + sLbl + '">Total Paquetes:</td><td style="' + sVal + '">' + totalPkgs + '</td>';
+            x += '<td colspan="2" style="' + sLbl + '">Objetivo/Bloque:</td><td style="' + sVal + '">' + objRound + '</td></tr>';
+            x += '<tr><td></td><td colspan="2" style="' + sLbl + '">Estrategia:</td><td colspan="' + (COLS - 2) + '" style="' + sVal + '">' +
+                STRATEGY_NAMES[state.currentStrategyIdx] + ' | Expansiones: ' + escapeHtml(expLabel()) + '</td></tr>';
+            x += '<tr><td></td><td colspan="2" style="' + sLbl + '">Archivos (' + state.files.length + '):</td><td colspan="' + (COLS - 2) +
+                '" style="' + sLbl + 'font-weight:normal;">' + escapeHtml(fileNames) +
+                (state.duplicates > 0 ? ' | Duplicados removidos: ' + state.duplicates : '') + '</td></tr>';
+            x += '<tr><td></td></tr>';
+
+            for (var g = 0; g * PER_ROW < state.blocks.length; g++) {
+                var grp = state.blocks.slice(g * PER_ROW, g * PER_ROW + PER_ROW);
+                var maxR = 0;
+                grp.forEach(function (b) { if (b.routes.length > maxR) { maxR = b.routes.length; } });
+
+                var rowAsoc = '<tr><td></td>';
+                var rowBlk = '<tr><td></td>';
+                var rowColH = '<tr><td></td>';
+                grp.forEach(function (b, k) {
+                    var name = (state.associates["B" + (b.id + 1)] || "").trim().toUpperCase() || "[SIN ASIGNAR]";
+                    rowAsoc += '<td colspan="2" style="' + sAsoc + '">' + escapeHtml(name) + '</td>';
+                    rowBlk += '<td colspan="2" style="' + sBlk + '">BLOQUE ' + (b.id + 1) + '</td>';
+                    rowColH += '<td style="' + sColH + '">RUTA</td><td style="' + sColH + '">PQTS</td>';
+                    if (k < grp.length - 1) { rowAsoc += '<td></td>'; rowBlk += '<td></td>'; rowColH += '<td></td>'; }
+                });
+                x += rowAsoc + '</tr>' + rowBlk + '</tr>' + rowColH + '</tr>';
+
+                for (var ri = 0; ri < maxR; ri++) {
+                    var row = '<tr><td></td>';
+                    grp.forEach(function (b, k) {
+                        var r = b.routes[ri];
+                        if (r) {
+                            var ex = state.expSet[r.name] ? "background:#E8F8F5;" : "";
+                            row += '<td style="' + sCellL + ex + '">' + escapeHtml(r.name) + '</td><td style="' + sCellR + ex + '">' + r.packages + '</td>';
+                        } else {
+                            row += '<td></td><td></td>';
+                        }
+                        if (k < grp.length - 1) { row += '<td></td>'; }
+                    });
+                    x += row + '</tr>';
+                }
+
+                var rowTR = '<tr><td></td>';
+                var rowTP = '<tr><td></td>';
+                grp.forEach(function (b, k) {
+                    rowTR += '<td style="' + sTotL + '">T.RUTAS:</td><td style="' + sTotR + '">' + b.routes.length + '</td>';
+                    rowTP += '<td style="' + sTotL + '">T.PQTS:</td><td style="' + sTotR + '">' + b.total + '</td>';
+                    if (k < grp.length - 1) { rowTR += '<td></td>'; rowTP += '<td></td>'; }
+                });
+                x += rowTR + '</tr>' + rowTP + '</tr>';
+                x += '<tr><td></td></tr><tr><td></td></tr>';
+            }
+
+            x += '<tr><td></td><td colspan="' + COLS + '" style="' + sFoot + '">Generado por ' + APP_VERSION +
+                ' | Daniel Diaz Paez | DSL1 | ' + fechaStr + ' ' + horaStr + '</td></tr>';
+            x += '</table></body></html>';
+
+            var blob = new Blob(["\ufeff" + x], { type: "application/vnd.ms-excel;charset=utf-8;" });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            var fileTs = now.getFullYear() + pad2(now.getMonth() + 1) + pad2(now.getDate()) + "_" + pad2(now.getHours()) + pad2(now.getMinutes());
+            a.href = url;
+            a.download = "Komander_Resumen_" + fileTs + ".xls";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+            setStatus("Resumen exportado: Komander_Resumen_" + fileTs + ".xls");
+            addHistory("Resumen del Dia");
+        }
+
+        /* ===================== PERSISTENCIA ===================== */
+
+        var CFG_KEY = "komander_dispatch_cfg_v1";
+        var HIST_KEY = "komander_dispatch_hist_v1";
+        var HIST_MAX = 300;
+
+        function storageGet(k) {
+            try { var v = window.localStorage.getItem(k); return v ? JSON.parse(v) : null; }
+            catch (e) { return null; }
+        }
+
+        function storageSet(k, v) {
+            try { window.localStorage.setItem(k, JSON.stringify(v)); return true; }
+            catch (e) { return false; }
+        }
+
+        function saveConfig() {
+            storageSet(CFG_KEY, {
+                numBlocks: dom.numBlocks.value,
+                maxRoutes: dom.maxRoutes.value,
+                expMode: dom.expMode.value,
+                associates: state.associates
+            });
+        }
+
+        function loadConfig() {
+            var c = storageGet(CFG_KEY);
+            if (!c) { return false; }
+            var nb = parseInt(c.numBlocks, 10);
+            var mr = parseInt(c.maxRoutes, 10);
+            if (nb >= 2 && nb <= 15) { dom.numBlocks.value = String(nb); }
+            if (mr >= 3 && mr <= 15) { dom.maxRoutes.value = String(mr); }
+            if (["auto", "inicio", "repartidas"].indexOf(c.expMode) !== -1) {
+                dom.expMode.value = c.expMode;
+                state.expMode = c.expMode;
+            }
+            if (c.associates && typeof c.associates === "object") { state.associates = c.associates; }
+            return true;
+        }
+
+        /* ===================== HISTORIAL ===================== */
+
+        function addHistory(tipo) {
+            if (state.blocks.length === 0) { return; }
+            var now = new Date();
+            var totals = state.blocks.map(function (b) { return b.total; });
+            var mx = Math.max.apply(null, totals);
+            var mn = Math.min.apply(null, totals);
+            var obj = state.objetivoPkgs;
+            var ok = 0;
+            var pk = 0;
+            var rt = 0;
+            state.blocks.forEach(function (b) {
+                pk += b.total;
+                rt += b.routes.length;
+                if (Math.abs(b.total - obj) <= obj * UMBRAL_SEMAFORO) { ok++; }
+            });
+            var hist = storageGet(HIST_KEY) || [];
+            hist.push({
+                fecha: pad2(now.getDate()) + "/" + pad2(now.getMonth() + 1) + "/" + now.getFullYear(),
+                hora: pad2(now.getHours()) + ":" + pad2(now.getMinutes()),
+                tipo: tipo,
+                archivos: state.files.length,
+                nombres: state.files.map(function (f) { return f.name; }).join(", "),
+                rutas: rt,
+                rutasExp: state.expKeys.length,
+                pkgs: pk,
+                pkgsExp: expPkgs(),
+                bloques: state.blocks.length,
+                maxRutas: parseInt(dom.maxRoutes.value, 10) || 0,
+                estrategia: STRATEGY_NAMES[state.currentStrategyIdx],
+                modoExp: state.expKeys.length > 0 ? modeLabel(state.appliedMode) + (state.expMode === "auto" ? " (Auto)" : "") : "-",
+                objetivo: Math.round(obj),
+                max: mx,
+                min: mn,
+                varianza: mx - mn,
+                varPct: obj > 0 ? Math.round((mx - mn) / obj * 1000) / 10 : 0,
+                ok: ok
+            });
+            if (hist.length > HIST_MAX) { hist = hist.slice(hist.length - HIST_MAX); }
+            storageSet(HIST_KEY, hist);
+        }
+
+        var HIST_COLS = [
+            ["fecha", "Fecha"], ["hora", "Hora"], ["tipo", "Tipo"], ["archivos", "Archivos"],
+            ["rutas", "Rutas"], ["rutasExp", "Rutas Exp"], ["pkgs", "Paquetes"], ["pkgsExp", "Pkgs Exp"],
+            ["bloques", "Bloques"], ["estrategia", "Estrategia"], ["modoExp", "Expansiones"],
+            ["objetivo", "Obj/Bloque"], ["varianza", "Varianza"], ["varPct", "Var %"], ["ok", "Bloques OK"]
+        ];
+
+        function showHistory() {
+            var hist = storageGet(HIST_KEY) || [];
+            if (hist.length === 0) {
+                dom.historyBody.innerHTML = '<div class="empty-sub" style="text-align:center;padding:30px;">Aun no hay balanceos registrados. Cada GENERAR BALANCEO y cada Resumen del Dia se guardan aqui.</div>';
+            } else {
+                var h = '<div style="text-align:center;font-size:0.78rem;color:#BDC3C7;margin-bottom:10px;">' + hist.length +
+                    ' registros (max ' + HIST_MAX + ') | Se guardan en este navegador</div>';
+                h += '<div class="hist-wrap"><table class="hist-table"><tr>';
+                HIST_COLS.forEach(function (c) { h += '<th>' + c[1] + '</th>'; });
+                h += '</tr>';
+                hist.slice().reverse().forEach(function (e) {
+                    h += '<tr title="' + escapeHtml(e.nombres || "") + '">';
+                    HIST_COLS.forEach(function (c) {
+                        var v = e[c[0]];
+                        if (c[0] === "varPct" && v !== "") { v = v + "%"; }
+                        if (c[0] === "ok" && e.bloques !== "") { v = e.ok + "/" + e.bloques; }
+                        h += '<td>' + escapeHtml(v === undefined ? "" : v) + '</td>';
+                    });
+                    h += '</tr>';
+                });
+                h += '</table></div>';
+                dom.historyBody.innerHTML = h;
+            }
+            dom.historyModal.classList.add("active");
+        }
+
+        function exportHistory() {
+            var hist = storageGet(HIST_KEY) || [];
+            if (hist.length === 0) { kdAlert("Historial vacio", "No hay historial para exportar."); return; }
+            var F = "font-family:Calibri,Arial,sans-serif;font-size:10pt;border:1px solid #9AA5B1;";
+            var x = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">';
+            x += '<head><meta charset="UTF-8"><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>';
+            x += '<x:Name>Historial</x:Name><x:WorksheetOptions><x:DoNotDisplayGridlines/></x:WorksheetOptions>';
+            x += '</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table cellspacing="0" cellpadding="3">';
+            x += '<tr><td colspan="' + (HIST_COLS.length + 1) + '" style="background:#232F3E;color:#FFFFFF;font-weight:bold;font-size:14pt;text-align:center;font-family:Calibri,Arial,sans-serif;">KOMANDER - Historial de Balanceos | DSL1</td></tr>';
+            x += '<tr>';
+            HIST_COLS.forEach(function (c) { x += '<td style="background:#37475A;color:#FFFFFF;font-weight:bold;text-align:center;' + F + '">' + c[1] + '</td>'; });
+            x += '<td style="background:#37475A;color:#FFFFFF;font-weight:bold;text-align:center;' + F + '">Archivos cargados</td></tr>';
+            hist.forEach(function (e, i) {
+                var bg = (i % 2 === 0) ? "#FFFFFF" : "#F5F5F5";
+                x += '<tr>';
+                HIST_COLS.forEach(function (c) {
+                    var v = e[c[0]];
+                    if (c[0] === "ok" && e.bloques !== "") { v = e.ok + "/" + e.bloques; }
+                    x += '<td style="background:' + bg + ';color:#232F3E;text-align:center;' + F + '">' + escapeHtml(v === undefined ? "" : v) + '</td>';
+                });
+                x += '<td style="background:' + bg + ';color:#232F3E;' + F + '">' + escapeHtml(e.nombres || "") + '</td></tr>';
+            });
+            x += '<tr><td colspan="' + (HIST_COLS.length + 1) + '" style="color:#7F8C8D;font-style:italic;font-size:9pt;text-align:center;font-family:Calibri,Arial,sans-serif;">Generado por ' + APP_VERSION + ' | Daniel Diaz Paez | DSL1</td></tr>';
+            x += '</table></body></html>';
+            var now = new Date();
+            var blob = new Blob(["\ufeff" + x], { type: "application/vnd.ms-excel;charset=utf-8;" });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "Komander_Historial_" + now.getFullYear() + pad2(now.getMonth() + 1) + pad2(now.getDate()) + ".xls";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+            setStatus("Historial exportado (" + hist.length + " registros)");
+        }
+
+        dom.btnHistory.addEventListener("click", showHistory);
+        dom.historyClose.addEventListener("click", function () { dom.historyModal.classList.remove("active"); });
+        dom.historyExport.addEventListener("click", exportHistory);
+        dom.historyClear.addEventListener("click", function () {
+            dom.historyModal.classList.remove("active");
+            kdConfirm("Borrar historial", "Borrar TODO el historial de balanceos de este navegador?\nExportalo antes si lo necesitas.", function () {
+                storageSet(HIST_KEY, []);
+                showHistory();
+                setStatus("Historial borrado");
+            }, "Si, borrar");
+        });
+        dom.historyModal.addEventListener("click", function (e) { if (e.target === dom.historyModal) { dom.historyModal.classList.remove("active"); } });
+
+        dom.expMode.addEventListener("change", function () {
+            state.expMode = this.value;
+            saveConfig();
+            if (state.allResults) { generate(); }
+        });
+        dom.numBlocks.addEventListener("change", saveConfig);
+        dom.maxRoutes.addEventListener("change", saveConfig);
+
+        /* ===================== EVENTOS GENERALES ===================== */
+
+        dom.strategy.addEventListener("change", function () {
+            if (!state.allResults) { return; }
+            var idx = parseInt(this.value, 10) - 1;
+            if (idx < 0 || idx >= state.allResults.length) { return; }
+            applyStrategy(idx);
+            var r = state.allResults[idx];
+            setStatus("Mostrando: " + r.name + " | OK: " + r.ok + "/" + r.totalB + " | Var: " + (r.varPct * 100).toFixed(1) + "%");
+        });
+
+        dom.btnBalance.addEventListener("click", generate);
+        dom.btnCompare.addEventListener("click", showCompare);
+        dom.btnUndo.addEventListener("click", doUndo);
+        dom.btnSummary.addEventListener("click", exportSummary);
+
+        var cfgLoaded = loadConfig();
+        renderBlocks();
+        setStatus(cfgLoaded ? "Listo | Configuracion y asociados recuperados | Carga uno o varios CSV" : "Listo | Carga uno o varios CSV para comenzar");
+        if (typeof window !== "undefined") { window.komanderDebug = { state: state, generate: generate, rebuildMerged: rebuildMerged, buildResults: buildResults, addHistory: addHistory, openAudit: openAudit, scan: handleScanText, audits: audits, auditSummary: auditSummary }; }
+        console.log(APP_VERSION + " | Daniel Diaz Paez | DSL1");
+    })();
+    </script>
+
+
+</body></html>
